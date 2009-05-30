@@ -1,0 +1,67 @@
+
+  <% if @creditcard.errors.any? %>
+    <div class="errorExplanation">
+      <h2>Errors encountered with your payment information:</h2>
+      <ul>
+        <%= @creditcard.errors.full_messages.map {|m| content_tag('li', m)} %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @address.errors.any? %>
+    <div class="errorExplanation">
+      <h2>Errors encountered with your address:</h2>
+      <ul>
+        <%= @address.errors.full_messages.map {|m| content_tag('li', m)} %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @subscription && @subscription.errors.any? %>
+    <div class="errorExplanation">
+      <h2>Errors encountered with your payment:</h2>
+      <ul>
+        <%= @subscription.errors.full_messages.map {|m| content_tag('li', m)} %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<fieldset>
+  <% if @subscription %>
+    <h2><input type="radio" name="paypal" value=" " <%= 'checked="checked"' unless @subscription.paypal? %>> Pay with a credit card</h2>
+  <% end %>
+  <label>Name on Card</label>
+  <%= text_field :creditcard, :first_name, :size => 20 %>
+  <%= text_field :creditcard, :last_name, :size => 20 %>
+  
+  <label>Card Number</label>
+  <%= text_field :creditcard, :number, :size => 20 %>
+  <label>Type</label>
+  <%= select :creditcard, :type, [['Visa', 'visa'], ['MasterCard', 'master'], ['American Express', 'american_express']] %>
+  <label>Expiration</label>
+  <%= select :creditcard, :month, (1 .. 12) %>
+  <%= select :creditcard, :year, (Time.now.year .. 10.years.from_now.year) %>
+  <label>CVV</label>
+  <%= text_field :creditcard, :verification_value, :size => 4 %>
+  <%= image_tag('cvv.gif', :size => '51x31', :align => 'top') %>
+  <label>Address</label>
+  <%= text_field :address, :address1 %><br/>
+  <%= text_field :address, :address2 %>
+  <label>City</label>
+  <%= text_field :address, :city %>
+  <label>State</label>
+  <%= text_field :address, :state %>
+  <label>Zip</label>
+  <%= text_field :address, :zip %>
+  <label>Country</label>
+  <%= country_select :address, :country, ['United States', 'Canada'] %>
+  <label>Phone</label>
+  <%= text_field :address ,:phone %>
+</fieldset>
+
+<% if @subscription %>
+  <fieldset>
+    <h2><input type="radio" name="paypal" value="true" <%= 'checked="checked"' if @subscription.paypal? %>> Pay with PayPal </h2>
+  </fieldset>
+<% end %>

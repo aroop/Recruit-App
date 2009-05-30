@@ -1,0 +1,65 @@
+<h1>Create an account</h1>
+
+<% form_tag :action => 'create' do %>
+  <%= hidden_field_tag 'plan', params[:plan] %>
+  <p>
+    Enter the name of your business and the subdomain you'd like to use for your site.
+  </p>
+  
+  <% if @account.errors.any? %>
+    <div class="errorExplanation">
+      <h2>Errors encountered with your account information:</h2>
+      <ul>
+        <%= @account.errors.full_messages.map {|m| content_tag('li', m)} %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <fieldset>
+    <% fields_for :account do |f| %>
+      <%= f.text_field :name %>
+      <%= f.text_field :domain %>.<%= AppConfig['base_domain'] %>
+    <% end %>
+  </fieldset>
+  
+  <p>
+    Enter info for the administrator account.
+  </p>
+  <fieldset>  
+    <% fields_for :user do |f| %>
+      <%= f.text_field :login %>
+      <%= f.text_field :email %>
+      <label for="user_password">Password</label>
+      <%= f.password_field :password %>
+      <label for="user_password_confirmation">Password Confirmation</label>
+      <%= f.password_field :password_confirmation %>
+    <% end %>
+  </fieldset>  
+  
+  <% if @account.needs_payment_info? %>
+    <p>
+      Enter your payment info
+    </p>
+    
+    <%= render :partial => "shared/credit_card_form" %>
+  <% end %>
+  
+  <br/>
+  
+  <fieldset>
+    <label>Discount Code</label>
+    <%= text_field_tag :discount, params[:discount] %>
+  </fieldset>
+  
+  <br/>
+  
+  <fieldset>
+    <% content_tag(:p) do %>
+      Your card will be charged <%= number_to_currency(@account.plan.setup_amount) + ' now and ' if  @account.plan.setup_amount? && !@account.plan.trial_period? %> <%= number_to_currency(@account.plan.amount) %> 
+      <%= @account.plan.renewal_period == 1 ? 'every month' : "every #{@account.plan.renewal_period} months" %>.
+    <% end if @account.needs_payment_info? %>
+
+    <input type="submit" value="Create my account" />
+  </fieldset>
+  
+<% end %>

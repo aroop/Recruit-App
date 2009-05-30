@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+basic:
+  amount: 10
+  name: Basic
+  user_limit: 3
+
+advanced:
+  amount: 10
+  name: Advanced
+  user_limit: 10
+
+free:
+  amount: 0
+  name: Free
+  user_limit: 1

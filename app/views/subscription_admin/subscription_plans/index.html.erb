@@ -1,0 +1,14 @@
+<h1><%= @page_title = 'Plans' %></h1>
+<%= link_to('Add a new plan', :action => 'new') %>
+<table id="plans">
+  <tr>
+    <th>Name</th>
+    <th>Amount</th>
+  </tr>
+  <% @subscription_plans.each do |plan| %>
+    <tr>
+      <td><%= link_to(h(plan.name), [:admin, plan]) %></td>
+      <td><%= number_to_currency(plan.amount) %></td>
+    </tr>
+  <% end %>
+</table>

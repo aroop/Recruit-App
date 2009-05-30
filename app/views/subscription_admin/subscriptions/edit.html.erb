@@ -1,0 +1,17 @@
+<h1><%= @page_title = 'Edit Subscription' %></h1>
+
+<p>
+  Changes made to the assigned plan or the assigned discount (or both) will override any changes made to the amount.
+</p>
+
+<% form_for [:admin, @subscription] do |form| %>
+  <%= form.error_messages %>
+  <fieldset>
+    <%= form.text_field :amount %>
+    <%= form.text_field :next_renewal_at, :label => 'Renewal date' %>
+    <%= form.text_field :state %>
+    <%= form.select :plan_id, SubscriptionPlan.all(:order => 'amount desc').collect {|p| [p.to_s, p.id]} %>
+    <%= form.select :subscription_discount_id, SubscriptionDiscount.all(:order => 'name').collect {|d| ["#{d.name} (#{d.code}) - #{discount_label(d)}", d.id]}, :include_blank => true %>
+  </fieldset>
+  <%= submit_tag %>
+<% end %>

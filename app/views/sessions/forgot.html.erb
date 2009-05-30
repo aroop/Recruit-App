@@ -1,0 +1,14 @@
+<% @page_title = 'Forgotten Password' %>
+
+<p>
+  If you've forgotten your password, you can submit your email address
+  here to request a password reset.  A confirmation email will be sent to
+  you which will contain a link you can use to reset your password.
+</p>
+
+<% form_tag :action => 'forgot' do %>
+  <label>Email:</label>
+  <%= text_field_tag :email %>
+  <br/>
+  <%= submit_tag 'Submit reset request' %>
+<% end %>

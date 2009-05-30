@@ -1,0 +1,20 @@
+This is a confirmation email to let you know your <%= AppConfig['app_name'] %>
+subscription has been changed to the <%= @subscription.subscription_plan.name %> plan.
+
+<% if @subscription.amount > 0 -%>
+Your next bill date will be <%= @subscription.next_renewal_at.to_s(:long_day).squeeze(' ') %>.
+
+<% if @subscription.needs_payment_info? -%>
+Please make sure you enter your billing information at the 
+following URL before your bill date to prevent an interruption
+in service:
+
+http://<%= @subscription.account.full_domain %>/account/billing
+<% end -%>
+<% end -%>
+
+
+If you have any questions about this email, please contact 
+<%= AppConfig['from_email'] %>.
+
+Thank you for your business!

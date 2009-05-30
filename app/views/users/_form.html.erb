@@ -1,0 +1,11 @@
+<%= error_messages_for :user %>
+
+<%= f.text_field :name %>
+<%= f.text_field :login %>
+<%= f.text_field :email %>
+<label>Password</label>
+<%= f.password_field :password %>
+<label>Password again</label>
+<%= f.password_field :password_confirmation %>
+
+<%= submit_or_cancel %>

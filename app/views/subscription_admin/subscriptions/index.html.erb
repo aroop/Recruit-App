@@ -1,0 +1,40 @@
+<% @page_title = 'Subscriptions' %>
+<% if @stats %>
+  <h1>Revenue Summary</h1>
+  <table id="stats">
+    <tr>
+      <th>Last Month</th>
+      <td><%= number_to_currency(@stats[:last_month]) %></td>
+    </tr>
+    <tr>
+      <th>Last 30 Days</th>
+      <td><%= number_to_currency(@stats[:last_30]) %></td>
+    </tr>
+    <tr>
+      <th>This Month</th>
+      <td><%= number_to_currency(@stats[:this_month]) %></td>
+    </tr>
+  </table>
+<% end %>
+
+<h1><%= @page_title %></h1>
+<table id="subscriptions">
+  <tr>
+    <th>Account</th>
+    <th>Amount</th>
+    <th>Created</th>
+    <th>Next Renewal</th>
+    <th>State</th>
+  </tr>
+  <% @subscriptions.each do |subscription| %>
+    <tr class="<%= 'expired' unless subscription.current? %>">
+      <td><%= link_to(h(subscription.account), [:admin, subscription]) %></td>
+      <td><%= number_to_currency(subscription.amount) %> <%= "(#{subscription.discount.name})" if subscription.discount %></td>
+      <td><%= subscription.created_at.to_s(:short_day) %></td>
+      <td><%= subscription.next_renewal_at.to_s(:short_day) %></td>
+      <td><%= subscription.state %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate(@subscriptions) %>

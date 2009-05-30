@@ -1,0 +1,13 @@
+<%= form.error_messages %>
+<fieldset>
+  <%= form.text_field :name %>
+  <%= form.text_field :code %>
+  <%= form.text_field :amount %>
+  <%= form.check_box :percent %>
+  <%= form.text_field :start_on %>
+  <%= form.text_field :end_on %>
+  <%= form.check_box :apply_to_recurring %>
+  <%= form.check_box :apply_to_setup %>
+  <%= form.text_field :trial_period_extension %>
+</fieldset>
+<%= submit_tag %>

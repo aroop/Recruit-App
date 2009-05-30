@@ -1,0 +1,29 @@
+Thank you for using <%= AppConfig['app_name'] %>!
+
+Your credit card <%= @subscription.card_number %> has been charged 
+<%= number_to_currency(@amount) %> for your <%= @subscription.subscription_plan.name %> plan. This charge covers usage
+from <%= Time.now.to_s(:short_day).strip %> until <%= @subscription.next_renewal_at.to_s(:short_day).strip %>.
+
+The attached invoice is for your records.
+
+
+INVOICE
+----------------------------------------------------------
+
+<%= AppConfig['app_name'] %>
+
+Bill to:
+<%= @subscription.account.admin.name %>
+
+Description                                          Price
+----------------------------------------------------------
+<%= (@subscription.subscription_plan.name + ' Plan').ljust(36) %> <%= number_to_currency(@amount).rjust(21) %>
+             From <%= Time.now.to_s(:short_day).strip %> to <%= @subscription.next_renewal_at.to_s(:short_day).strip %>
+
+                   Credit card billed: <%= @subscription.card_number %>
+
+
+If you have any questions about this invoice, please contact 
+<%= AppConfig['from_email'] %>.
+
+Thank you for your business!

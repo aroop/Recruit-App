@@ -1,0 +1,185 @@
+== Welcome to the SaaS Rails Kit
+
+This kit will help you get a quick start on building new web
+applications that need a recurring billing component and have
+multiple plan levels that are charged at varying rates. Typical
+examples of this kind of Rails application are the services
+offered by 37signals: Basecamp, Backpack, etc.
+
+The kit comes configured to allow customers to paid accounts with
+a 1 month free trial without collecting payment information.
+Emails are sent to remind customers when a trial account is about
+to expire, when the plan level gets changed, when payment is made,
+and when an account is canceled.
+
+Though there is an active? method in Account, the method is not
+used anywhere in the application. It's up to you to decide what to
+do for accounts that are no longer active due to an expired trial
+or a failed credit card charge. In my Catch the Best application,
+I simply call that method in a before filter and render a template
+directing the user to the enter billing information if that method
+returns false.
+
+== Getting Started
+
+This code provides a complete, running Rails application. There are
+a few things you need to do to get started, though. First, you
+should create your database using 'rake db:create' (by default the
+app is configured to use MySQL). Then, you need to create the
+database tables and load some initial data, which can be done with
+the following rake command on the command line:
+
+rake db:bootstrap
+
+Once that's done, you are ready to go. Start up the app and browse
+to it in your web browser. Log in with the login test and the
+password test, and you'll be logged in as the admin user for a
+test customer account.
+
+== Deploying to a Production Server
+
+This kit is designed to be served by a web server configured for
+name-based virtual hosting. In my deployments, I point the
+"default" configuration at the app so that traffic to any domain
+name not explicitly set in my other virtual host sections gets
+directed to the application.
+
+For the "public" web site, where one typically has a welcome page,
+tour, etc., create a separate virtual host for www.yourdomain.com
+or yourdomain.com, and forward all urls that begin with /signup to
+the Rails application. You'll notice in config/routes.rb that the
+pricing grid, account creation page, and sign-up thank-you page
+are all served with urls that start with /signup. If the layout
+for your public site will differ from the layout of the
+application, add a new layout to app/views/layouts and edit
+app/controllers/accounts_controller.rb to change the new, plans,
+and thanks actions to use that layout.
+
+The application is written to allow all admins to update their
+payment information while logged in to an account, which means
+that SSL connections will be attempted for all the subdomains of
+your base domain. Unless you want SSL certificate warnings for
+your customers, then, you'll need to get a wildcard SSL
+certificate. I use GoDaddy to purchase mine: currently $200 per
+year. Of course you could rewrite the billing action in
+app/controllers/accounts_controller.rb to redirect to a specific
+subdomain to avoid the cost of a wildcard SSL cert... feel free to
+do so. :)
+
+Make sure you set up a cron job to run script/daily_mailer on a
+daily basis. This script does the charging for account renewals
+and sends notices of expiring trials.
+
+== PayPal
+
+PayPal payments are handled via PayPal's recurring payment profiles,
+which are a part of the Website Payments Standard plan. You don't
+need to sign up for Website Payments Pro or PayFlow -- just the
+basic business plan. There are a couple of caveats when using PayPal
+in addition to or in place of a standard credit card gateway:
+ - If you require payment information to create a trial account
+   (not the default) you can't currently use PayPal as a payment
+   option for that. Currently (and this is just a limitation of
+   the Kit at present), PayPal info can only be collected for an
+   existing account when changing billing information. If you
+   allow trial accounts without collecting payment info first,
+   this isn't an issue, since as soon as the account is created
+   the user can then supply the billing info via PayPal.
+ - You will need to enable API access in both your sandbox and
+   live paypal accounts.
+ - Your customers will be redirected to PayPal to collect billing
+   information (of course), but they will also be redirected to
+   PayPal when changing to a paid plan.  This is because a new
+   recurring payment profile needs to be created with PayPal.  If a
+   customer switches from a paid plan to a free plan, no redirect
+   happens, as the existing recurring payment profile is simply
+   destroyed behind the scenes.
+ 
+== Known Issues
+
+Rail's development mode behavior of reloading the classes with
+every request does not play well with the procs used in Account
+and Subscription for doing limit checks. This will be apparent if
+you test the plan changing functionality with your browser in
+development mode. This is not an issue in production mode, where
+class reloading is turned off.
+ 
+== Contents
+
+Hopefully you're familiar enough with the basics of Rails that I
+don't have to explain what every file in this archive does. If
+not, go read some books like Agile Web Development with Rails and
+then come back here. With that out of the way, here are some of
+the files you'll want to check out:
+
+app/
+  controllers/
+    users_controller.rb - Here's an example of how you can use
+    limits in your application. Notice the before filter to
+    enforce the limit, and the include to pull in generic RESTful
+    methods. Also notice the scoper method, which is used to scope
+    all the finds to the current account (the current_account
+    method is defined in ApplicationController). Use this pattern
+    throughout your application to make sure users only see the
+    data associated with their account.
+    
+  models/
+    account.rb - Near the top of the file you'll notice the Limits
+    constant, which is used to set up the various limits you'll be
+    checking for plan eligibility and for being able to do various
+    things in your app. For example, the user_limit entry in the
+    hash checks the count of associated users, and is used to
+    create the reached_user_limit? convenience method (right after
+    the definition of Limits).
+    
+    subscription.rb - The Limits constant at the top of this file
+    contains the checks that will be executed when an account
+    holder attempts to change plans. If the account would exceed
+    the limits based on the account's usage, the subscription
+    fails validation and its error messages are populated by the
+    right-hand side of this hash.
+    
+    The store_card method is used to authorize and store the
+    credit card info with BrainTree. If the account is still in
+    the trial period, or is otherwise still current (been charged
+    within the last month), the card will just be stored, and the
+    next renewal date will be unchanged. Otherwise, the card will
+    be charged for the amount that's currently due, and the next
+    renewal date will be set to a month in the future.
+    
+    The charge method is used by the daily_mailer script to bill
+    for the subscriptions on the renewal date.
+    
+  views/
+    subscription_notifier/ - All the content for emails sent to
+    account owners is here.
+
+config/
+  gateway.yml - Login info for credit card gateway.
+  
+  config.yml - Some settings for the application, fairly
+  self-explanatory.
+  
+  paypal.yml - Login info for PayPal API.
+  
+lib/
+  authenticated_system.rb - This file, from the
+  restful_authentication plugin, has been modified to scope logins
+  to the account loaded by the hostname.
+
+  model_controller_methods.rb - Shared controller methods that
+  come in handy for RESTful controllers.
+  
+  subscription_system.rb - Included from ApplicationController, this
+  module defines the current_account method, critical to scoping
+  all queries to the Account loaded from the database based on the
+  hostname.
+  
+script/
+  daily_mailer - Charges the credit cards for accounts that need
+  to be charged and sends emails to owners of trial accounts a
+  week before the trial is set to expire.
+
+== Testing
+
+If you'd like to run the included test suite, install the mocha, rspec, and rspec-rails gems, and then run rake spec.

@@ -1,0 +1,23 @@
+<h1><%= @page_title = 'View Account' %></h1>
+<table id="account">
+  <tr>
+    <th>Name</th>
+    <td><%= h(@account.name) %></td>
+  </tr>
+  <tr>
+    <th>Domain</th>
+    <td><%= @account.full_domain %></td>
+  </tr>
+  <tr>
+    <th>Created</th>
+    <td><%= @account.created_at.to_s(:short_day) %></td>
+  </tr>
+  <tr>
+    <th>Plan</th>
+    <td><%= link_to(@account.subscription.subscription_plan, [:admin, @account.subscription.subscription_plan]) %></td>
+  </tr>
+  <tr>
+    <th>Lifetime Revenue</th>
+    <td><%= link_to(number_to_currency(@account.subscription_payments.sum(:amount)), [:admin, @account.subscription]) %></td>
+  </tr>
+</table>

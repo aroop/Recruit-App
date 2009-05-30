@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title><%= @page_title ? "#{@page_title} | #{AppConfig['app_name']}" : AppConfig['app_name'] %></title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<%= stylesheet_link_tag 'reset-fonts.css', 'gt-styles.css', 'admin.css' %>
+		<%= yield :head %>
+	</head>
+	<body class="<%= controller.controller_path.gsub('/', ' ') %>">
+		<!-- head -->
+		<div class="gt-hd clearfix">
+			<!-- logo -->
+			<div class="gt-logo">
+				<%= AppConfig['app_name'] %>
+			</div>
+			<!-- / logo -->
+			
+			<!-- navigation -->
+			<div class="gt-nav">
+				<ul>
+				  <% if admin_subdomain? %>
+				    <li><%= link_to('Subscriptions', admin_subscriptions_path) %></li>
+				    <li><%= link_to('Accounts', admin_accounts_path) %></li>
+				    <li><%= link_to('Plans', admin_subscription_plans_path) %></li>
+				    <li><%= link_to('Discounts', admin_subscription_discounts_path) %></li>
+				  <% elsif logged_in? %>
+  					<li><a href="/">Home</a></li>
+  					<li><a href="/users">Users</a></li>
+  					<%= content_tag(:li, link_to("Account", account_url)) if admin? %>
+  					<li><%= link_to("Log out #{current_user.name}", session_url, :method => :delete) %></li>
+  				<% end %>
+				</ul>
+			</div>
+			<!-- / navigation -->
+			
+		</div>
+		<!-- / head -->
+		
+		<!-- body -->
+		<div class="gt-bd gt-cols clearfix">
+			
+			<!-- main content -->
+			<div class="gt-content">
+				
+				<%= flash_notices %>
+				<%= yield %>
+				
+			</div>
+			<!-- / main content -->
+			
+			<!-- sidebar -->
+			<div class="gt-sidebar">
+				<%= yield :sidebar %>
+			</div>
+			<!-- / sidebar -->
+			
+		</div>
+		<!-- / body -->
+		
+		<!-- footer -->
+		<div class="gt-footer">
+			<p>Copyright &copy; 2008 Gooey Templates - <a href="http://www.gooeytemplates.com" target="_blank">GooeyTemplates.com</a></p>
+		</div>
+		<!-- /footer -->
+	</body>
+</html>

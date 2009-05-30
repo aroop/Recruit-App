@@ -1,0 +1,16 @@
+<h1><%= @page_title = 'View Discount' %></h1>
+<%= link_to('Edit Discount', :action => 'edit') %>
+<table id="subscription_discount">
+  <tr>
+    <th>Name</th>
+    <td><%= h(@subscription_discount.name) %></td>
+  </tr>
+  <tr>
+    <th>Code</th>
+    <td><%= h(@subscription_discount.code) %></td>
+  </tr>
+  <tr>
+    <th>Amount</th>
+    <td><%= discount_label(@subscription_discount) %></td>
+  </tr>
+</table>

@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'lockfile'
+
+Lockfile('lock', :retries => 0) do
+  require File.dirname(__FILE__) + '/../config/boot'
+  require File.dirname(__FILE__) + '/../config/environment'
+
+  Subscription.find_expiring_trials.each do |sub|
+    if admin = sub.account.admin
+      SubscriptionNotifier.deliver_trial_expiring(admin, sub)
+    end
+  end
+  
+  # Trial subscriptions for which we have payment info.
+  # This will always turn up empty unless we are collecting 
+  # payment info when creating an account.
+  Subscription.find_due_trials.each do |sub|
+    if !sub.charge
+      SubscriptionNotifier.deliver_charge_failure(sub)
+    end
+  end
+
+  Subscription.find_due.each do |sub|
+    if !sub.charge
+      SubscriptionNotifier.deliver_charge_failure(sub)
+    end
+  end
+
+  # Subscriptions overdue for payment (2nd try)
+  Subscription.find_due(5.days.ago).each do |sub|
+    if !sub.charge
+      SubscriptionNotifier.deliver_charge_failure(sub)
+    end
+  end
+
+end

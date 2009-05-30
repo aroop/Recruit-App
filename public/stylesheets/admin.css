@@ -1,0 +1,15 @@
+body.subscription_admin table td, body.subscription_admin table th {
+	padding-right: 1em;
+}
+
+body.subscription_admin table th {
+	font-weight: bold;
+}
+
+h2 {
+	margin-top: 10px;
+}
+
+input[type=submit] {
+	margin-top: 1em;
+}

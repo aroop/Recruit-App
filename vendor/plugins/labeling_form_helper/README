@@ -1,0 +1,66 @@
+= Labeling Form Helper
+
+Adds auto-labeling with some custom options to Rails' form helpers by extending ActionView::Helpers::FormBuilder and ActionView::Helpers::FormTagHelper.
+
+In these examples, :labeling_form_builder is an instance of LabelingFormBuilder such as you would get using the :form_for helper's :builder option or by setting it as the application default in your environment or other configuration.
+  
+  
+  >> labeling_form_builder.text_field :attr_name
+  => <label for="thing_attr_name">Attr name</label><input ... />
+  
+  >> labeling_form_builder.text_field :attr_name, :label => 'yeah, foo'
+  => <label for="thing_attr_name">yeah, foo</label><input ... />
+  
+  >> labeling_form_builder.text_field :attr_name, :label => false
+  => <input ... />
+  
+  
+To ease integration of the _tag helpers, the labeling behavior is off by default unless you at least specify :label => true.
+
+  
+  >> text_field_tag :attr_name
+  => <input ... />
+  
+  >> text_field_tag :attr_name, :label => true
+  => <label for="attr_name">Attr name</label><input ... />
+  
+  
+Wrapping the input can be useful for checks and radios, as well as a style hook of sorts in some situations. The interface shown is identical for the form builder.
+
+  
+  >> check_box_tag :attr_name, :label => { :wrap => true }
+  => <label for="attr_name">Attr name <input ... /></label>
+  
+  >> check_box_tag :attr_name, :label => { :after => true }
+  => <input ... /><label for="attr_name">Attr name</label>
+  
+  >> radio_button_tag :attr_name, :label => { :wrap => true, :after => true }
+  => <label for="attr_name"><input ... /> Attr name</label>
+  
+  >> radio_button_tag :attr_name, :label => { :wrap => :after }
+  => <label for="attr_name"><input ... /> Attr name</label>
+  
+
+Valid values for the :label option are:
+  
+  
+  * true   - This will render with the default auto-labeling behavior. This is only useful for the _tag helpers which act as normal unless the :label option is set.
+  * false  - This will render the normal behavior i.e. without a label. This is only useful for the LabelingFormBuilder which adds the behavior from this plugin by default.
+  * String - Customize the label text, normally the humanized version of the attribute name for the field.
+  * Hash   - Customize text with :text and the order of the label + input pair and/or whether or not the label wraps the input using :wrap and/or :after. Any other HTML tag attribute options will be applied to the label tag.
+  
+  
+You can easily set the LabelingFormBuilder as the application default using the following expression:
+  
+  
+  >> ActionView::Base.default_form_builder = LabelingFormBuilder
+  
+    
+The LabelingFormTagHelper is enabled by default, but its behavior is not applied to the normal _tag helpers unless you use the :label option.
+
+Please label responsibly.
+
+CONTRIBUTORS
+  
+  * Seth Thomas Rasmussen : http://sethrasmussen.com : sethrasmussen@gmail.com
+  * Jeremy Kemper : http://bitsweat.net

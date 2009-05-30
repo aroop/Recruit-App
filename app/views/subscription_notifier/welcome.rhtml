@@ -1,0 +1,12 @@
+Welcome to <%= AppConfig['app_name'] %>!
+
+You signed up for the <%= @account.subscription.subscription_plan.name %> plan with the email address <%= @account.admin.email %>.
+
+To sign in again in the future, please return to the following
+URL and use the email address and password you used to create 
+your account:
+
+http://<%= @account.full_domain %> 
+
+If you have any questions about or problems with the service, 
+please don't hesitate to email <%= AppConfig['from_email'] %>. 

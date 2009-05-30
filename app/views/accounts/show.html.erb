@@ -1,0 +1,8 @@
+Hi, <%= @account.name %>!
+
+<ul>
+  <li><%= link_to('Edit account', edit_account_url) %></li>
+  <li><%= link_to('Change plan', plan_account_url) %></li>
+  <li><%= link_to('Billing info', billing_account_url) %></li>
+  <li><%= link_to('Cancel plan', cancel_account_url) %></li>
+</ul>

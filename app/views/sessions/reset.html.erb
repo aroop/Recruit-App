@@ -1,0 +1,22 @@
+<% @page_title = 'Reset Password' %>
+
+<p>
+  To reset your password, enter the new password you'd like to use in the form below.  After submitting the form, you'll be asked to log in with the new password.
+</p>
+
+<% form_for :user, @user, :action => 'reset', :token => params[:token] do |f| %>
+  <% if @user.errors.any? %>
+    <div class="errorExplanation" id="errorExplanation">
+      <h2>Some errors were encountered while updating your account</h2>
+      <ul>
+        <%= @user.errors.full_messages.map {|e| content_tag('li', e)} %>
+      </ul>
+    </div>
+  <% end %>
+  <label for="password">Password:</label>
+  <%= f.password_field :password %>
+  <label for="password_confirmation">Password Confirmation:</label>
+  <%= f.password_field :password_confirmation %>
+  <br/>
+  <%= submit_tag 'Change password' %>
+<% end %>

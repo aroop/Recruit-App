@@ -1,0 +1,9 @@
+development:
+  login: 'demo'
+  password: 'password'
+production:
+  login: 'demo'
+  password: 'password'
+test:
+  login: 'demo'
+  password: 'password'

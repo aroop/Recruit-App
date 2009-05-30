@@ -1,0 +1,4 @@
+sub:
+  code: bar
+  amount: 5
+  percent: false

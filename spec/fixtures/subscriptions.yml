@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  account: localhost
+  subscription_plan: basic
+  user_limit: 3
+  next_renewal_at: <%= 1.day.ago.to_s(:db) %>
+  amount: 10
+  card_number: XXXX-XXXX-XXXX-1111
+  card_expiration: 05-2012
+  billing_id: foo

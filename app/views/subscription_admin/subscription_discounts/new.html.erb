@@ -1,0 +1,5 @@
+<h1><%= @page_title = 'Create Discount' %></h1>
+
+<% form_for [:admin, @subscription_discount] do |form| %>
+  <%= render :partial => 'form', :object => form %>
+<% end %>
