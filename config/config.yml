@@ -1,3 +1,6 @@
+company_name: AAPAM Technologies LLC
+company_url:  http://www.appamtech.com
+
 # Used for subscription emails (subscription_notifier.rb)
 app_name: Recruit App
 from_email: support@RecruitApp.com

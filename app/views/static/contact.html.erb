@@ -1,5 +1,5 @@
 <% @page_title = "Contact Us" -%>
-<% @page_description = "Do you have a RecruitApp-related question? Do you want to know if RecruitApp is right for your business? Don't hesitate to say hello." -%>
+<% @page_description = "Do you have a #{AppConfig['app_name']}-related question? Do you want to know if #{AppConfig['app_name']} is right for your business? Don't hesitate to say hello." -%>
 
 <div class="content cbg">
       <div class="container_16 linebg">
@@ -7,7 +7,7 @@
             <div class="grid_11 para sepline">
                   <div class="text">
                         <h2>Reach us rightnow!</h2>
-                        <p> <strong>If you’re a user and you need technical support, email us at support@RecruitApp.com. </strong> </p>
+                        <p> <strong>If you’re a user and you need technical support, email us at <%= mail_to AppConfig['from_email'], AppConfig['from_email'], :encode => "hex" -%>. </strong> </p>
                         <br />
                         <!-- Contact Form Start -->
                         <form action="contactsent.php" method="post" name="form1" id="form1" style="margin:0px; font:Normal 12px Arial,Tahoma, Verdana, Helvetica, sans-serif;width:200px; color:#000;"
@@ -39,21 +39,20 @@ onsubmit="MM_validateForm('from','','RisEmail','subject','','R','verif_box','','
             <div class="grid_5">
                   <div class="text">
                         <h2>Location</h2>
-                        <p>OFFICE : Street #12456<br/>
-                              HomeTown village <br/>
-                              Ville Park Marg</p>
+                        <p>OFFICE : 10833, Folsom Blvd<br/>
+                              Rancho Cordova <br/>
+                              CA 95670</p>
                   </div>
                   <div class="text">
                         <h2>Instant Messangers </h2>
-                        <p>Gmail : Yourname@gmail.com <br/>
-                              Yahoo : Yourname@yahoo.co.in <br/>
-                              MSN : Yourname@msn.com</p>
+                        <p>Gmail : RecruitApp@gmail.com <br/>
+                              Yahoo : RecruitApp@yahoo.com <br/>
+                              MSN : RecruitApp@msn.com</p>
                   </div>
                   <div class="text">
                         <h2>Phone</h2>
-                        <p>OFFICE : 000-123456 <br/>
-                              HOME: 000-789123 <br/>
-                              MOBILE: 9876543210</p>
+                        <p>OFFICE : 302 250 4624 <br/>
+                           Skype: RecruitApp</p>
                   </div>
             </div>
             <!--End of the Right part text  -->

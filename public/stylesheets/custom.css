@@ -1,7 +1,7 @@
 .sub-plans {
 	border-bottom:2px solid #448899;
 	font-size:12px;
-	margin:0 0 20px;
+	margin:0 0 20px 50px;
 	padding:0;
 	width:860px;
 }
@@ -13,6 +13,11 @@
 
 .sub-plans .plans h2 {
 	margin:0 0 0;
+}
+
+a span.white{
+	color:#FF4400;
+	text-decoration:none;
 }
 
 .sub-plans .plans a:link {

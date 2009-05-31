@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20090531003056) do
     t.decimal  "setup_amount",   :precision => 10, :scale => 2
     t.integer  "trial_period",                                  :default => 1
     t.integer  "storage"
+    t.boolean  "ssl_support"
   end
 
   create_table "subscriptions", :force => true do |t|

@@ -1,6 +1,9 @@
 <% content_for :head do %>
 	<%= stylesheet_link_tag 'blogcss' %>
 <% end %>
+<% @page_title = "#{AppConfig['app_name']} Blog" %>
+<% @page_description = "News, talk, opinions, tips and tricks about #{AppConfig['app_name']}. All in one place." -%>
+
 <div class="content cbg">
       <div class="container_16 linebg">
             <!--left part of text follows here-->

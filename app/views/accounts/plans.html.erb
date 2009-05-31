@@ -33,19 +33,19 @@
 						<tr>
 							<th>Unlimited clients</th>
 							<% @plans.each do |plan|-%>
-								<td><img width="16" height="16" alt="yes" src="/images/check_16.gif"/></td>
+							<td><img width="16" height="16" style="padding-bottom: 0px;" alt="yes" src="/images/check_16.gif"/></td>
 							<% end -%>
 						</tr>
 						<tr>
 							<th>30 Day Free Trail</th>
 							<% @plans.each do |plan|-%>
-								<td><img width="16" height="16" alt="yes" src="/images/check_16.gif"/></td>
+							<td><img width="16" height="16" style="padding-bottom: 0px;" alt="yes" src="/images/check_16.gif"/></td>
 							<% end -%>
 						</tr>
 						<tr>
 							<th>SSL Security</th>
 							<% @plans.each do |plan|-%>
-								<td><img width="16" height="16" alt="yes" src="/images/check_16.gif"/></td>
+								<td><%= ssl_support(plan) -%></td>
 							<% end -%>
 						</tr>
 					</tbody>
