@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090323182409) do
+ActiveRecord::Schema.define(:version => 20090531003056) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20090323182409) do
     t.integer  "renewal_period",                                :default => 1
     t.decimal  "setup_amount",   :precision => 10, :scale => 2
     t.integer  "trial_period",                                  :default => 1
+    t.integer  "storage"
   end
 
   create_table "subscriptions", :force => true do |t|

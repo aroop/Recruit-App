@@ -11,7 +11,7 @@ class AccountsController < ApplicationController
   ssl_allowed :plans, :thanks, :canceled, :paypal
   
   def new
-    # render :layout => 'public' # Uncomment if your "public" site has a different layout than the one used for logged-in users
+    render :layout => 'static'
   end
   
   def create
@@ -26,13 +26,13 @@ class AccountsController < ApplicationController
       flash[:domain] = @account.domain
       redirect_to :action => 'thanks'
     else
-      render :action => 'new'#, :layout => 'public' # Uncomment if your "public" site has a different layout than the one used for logged-in users
+      render :action => 'new', :layout => 'static'
     end
   end
   
   def plans
     @plans = SubscriptionPlan.find(:all, :order => 'amount desc').collect {|p| p.discount = @discount; p }
-    # render :layout => 'public' # Uncomment if your "public" site has a different layout than the one used for logged-in users
+    render :layout => 'static'
   end
   
   def billing

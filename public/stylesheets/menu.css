@@ -1,0 +1,100 @@
+/*-------------------------------------------------------
+* Filename: styles.css
+* Author: system32
+* Description: Handles the Menus
+   -----------------------------------------------------*/
+
+/*------------------------------------------------------
+  				Top header Menu
+  ------------------------------------------------------*/	
+.menu{
+padding-top:30px;
+float:right;
+	z-index:25;
+}
+
+.menu ul{	
+	list-style: none;
+	list-style-type: none;
+	font:normal bold 11px Arial, Helvetica, sans-serif;
+	padding:0px;
+	float:right;
+	margin:0px;
+}
+.menu ul li{
+	float: left;
+	width:auto;
+	margin: 0 5px 0 0;
+
+}
+.menu ul li a:link, .menu ul li a:visited{
+	color:#cbe3f4;	display:inline;
+	}
+.menu ul li a{
+	display: block;
+	padding: 0px 15px;
+	text-decoration: none;
+	line-height:26px;
+	font-weight:bold;
+	float:left;
+	width:auto;	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;	
+	-webkit-border-radius:3px;	
+	text-decoration:none;
+	text-transform: uppercase;
+}
+
+.menu ul li a:hover{
+	text-decoration:none;
+	color:#FFFFFF;
+	background:#137dc8;	background:url(../images/topmenu.gif) repeat-x;
+}
+
+
+.menu ul li.active a{
+
+		line-height:26px;
+		height:26px;
+		
+}
+
+.menu ul li.active {
+	text-decoration: none;
+	line-height:26px;
+		
+}
+
+.menu ul li.active  a, .menu ul li.active  a:visited{
+text-decoration: none;
+	color:#f7f7f7;	
+		line-height:26px;
+		height:26px;
+}
+
+.menu ul li.current a, .menu ul li.current  a:visited
+{
+	color:#FFFFFF;
+	background:#137dc8;	background:url(../images/topmenu.gif) repeat-x;
+}
+/*------------------------------------------------------
+  				Sidebar Menu
+  ------------------------------------------------------*/	
+
+.submenu li{
+padding:5px 0 5px 0;
+border-bottom:solid 1px #dedede;
+}
+
+
+.submenu li a:hover{
+padding:5px 0 5px 0;
+color:#0c63a9;
+font-weight:bold;
+text-decoration:none;
+}
+
+.submenu li.current a
+{
+font-weight:bold;
+}

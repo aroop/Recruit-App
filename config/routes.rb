@@ -35,7 +35,14 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
   
-  map.root :controller => "accounts", :action => "dashboard"
+  #map.root :controller => "accounts", :action => "dashboard"
+  map.root :controller => "static", :action => "index"
+  map.with_options :controller => "static" do |main| 
+    main.tour '/tour', :action => 'tour'
+    main.blog '/blog', :action => 'blog'
+    main.support '/support', :action => 'support'
+    main.contact '/contact', :action => 'contact'
+  end
 
   # See how all your routes lay out with "rake routes"
   map.plans '/signup', :controller => 'accounts', :action => 'plans'

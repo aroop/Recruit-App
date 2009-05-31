@@ -1,9 +1,56 @@
-<h1>Plans</h1>
+<% @page_title = "Lets choose your plan..." %>
+<% @page_description = "We have a variety of plans for you to choose from, and, more importantly, you can upgrade, downgrade, or cancel anytime without worrying about long-term contracts or cancellation fees." -%>
 
-<p>
-  Here are our plans.  Pick one:
-</p>
-
-<ul>
-  <%= @plans.map {|p| content_tag(:li, link_to(p, new_account_url(:plan => p, :discount => params[:discount])))} %>
-</ul>
+<div class="content cbg">
+  <div class="container_16 linebg">
+     <div class="grid_16 para">
+			<br/>
+			<table width="100%" class="sub-plans" border="1">
+					<tbody>
+						<tr class="plans">
+							<th></th>
+							<% @plans.each do |plan|-%>
+								<td>
+									<h2><%= plan.name -%></h2>
+									<span><%= price(plan) -%></span>
+									<br/>
+									<%= link_to "Sign up", new_account_url(:plan => plan) %>
+								</td>
+							<% end -%>
+						</tr>
+						<tr class="strong">
+							<th>Employees</th>
+							<% @plans.each do |plan|-%>
+								<td><%= employee_limit(plan) -%></td>
+							<% end -%>
+						</tr>
+						<tr>
+							<th>File Storage</th>
+							<% @plans.each do |plan|-%>
+								<td><%= storage(plan) -%></td>
+							<% end -%>
+						</tr>
+						<tr>
+							<th>Unlimited clients</th>
+							<% @plans.each do |plan|-%>
+								<td><img width="16" height="16" alt="yes" src="/images/check_16.gif"/></td>
+							<% end -%>
+						</tr>
+						<tr>
+							<th>30 Day Free Trail</th>
+							<% @plans.each do |plan|-%>
+								<td><img width="16" height="16" alt="yes" src="/images/check_16.gif"/></td>
+							<% end -%>
+						</tr>
+						<tr>
+							<th>SSL Security</th>
+							<% @plans.each do |plan|-%>
+								<td><img width="16" height="16" alt="yes" src="/images/check_16.gif"/></td>
+							<% end -%>
+						</tr>
+					</tbody>
+			</table>
+			<p align="center"><strong>Resume App is a monthly subscription service. You may upgrade, downgrade, or cancel your service at any time.</strong></p>
+     </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="top_bg">
+      <div class="container_16">
+            <div class="grid_5"><a href="#"><img src="images/logo.png" class="logo" alt="Memix" /></a></div>
+            <!-- Top menu Start -->
+            <div class="grid_11 menu">
+                  <ul>
+												<li <%= controller_action_is("static", "index")? "class=current" : "" -%> >
+													<%= link_to "<span>Home</span>", root_path %>
+												</li>
+												<li <%= controller_action_is("static", "tour")? "class=current" : "" -%> >
+													<%= link_to "<span>Tour</span>", tour_path %>
+												</li>
+												<li <%= controller_action_is("accounts", "plans")? "class=current" : "" -%> >
+													<%= link_to "<span>Pricing & Signup</span>", plans_path %>
+												</li>
+												<li <%= controller_action_is("static", "blog")? "class=current" : "" -%> >
+												<%= link_to "<span>Blog</span>", blog_path %>
+												</li>
+												<li <%= controller_action_is("static", "support")? "class=current" : "" -%> >
+													<%= link_to "<span>Support</span>", support_path %>
+												</li>
+												<li <%= controller_action_is("static", "contact")? "class=current" : "" -%> >
+													<%= link_to "<span>Contact Us</span>", contact_path %>
+												</li>
+                  </ul>
+                  <!-- Top menu End -->
+            </div>
+      </div>
+</div>
+<div class="clear">&nbsp;</div>

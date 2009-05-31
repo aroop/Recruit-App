@@ -1,0 +1,211 @@
+/*-------------------------------------------------------
+* Filename: styles.css
+* Author: system32
+* Description: Handles the Blog Page & comment Page layout.
+   -----------------------------------------------------*/
+
+/*------------------------------------------------------
+  				Comments
+  ------------------------------------------------------*/	
+
+/*- Blog Comments --------------------------- */
+.the_commentor {
+float:left;
+width:110px;
+text-align:right;
+}
+.the_commentor p
+{
+padding:0;
+margin:0;
+}
+.the_commentors img
+{
+background:#FFFFFF url(../images/commentby.gif) right 15px no-repeat;
+padding-right:10px;
+}
+.comment-metadata a {
+text-decoration:none;
+font-size:10px;
+letter-spacing:0;
+}
+
+.the_comment {
+float:right;
+width:450px;
+font:normal 12px/18px Arial, Helvetica, sans-serif;
+letter-spacing:-1;
+color:#5d5949;
+padding:20px;
+margin-right:5px;
+min-height:100px;
+margin-bottom:10px;
+background-color:#f8f8f8;
+border:1px solid #dddddd;
+}
+
+ol.commentlist li.alt .the_comment {
+position:relative;
+top:1px;
+overflow:auto;
+background-color:#ffffff;
+}
+
+ol.commentlist {
+padding:10px 0;
+margin:0;
+}
+
+ol.commentlist li {
+clear:both;
+list-style:none;
+}
+
+.comment-author {
+font: normal bold 14px/16px Arial, Helvetica, sans-serif;
+margin-bottom:0;
+}
+
+.comment-author a {
+color:#1a7dc7;
+text-decoration:none;
+}
+
+.commentlist .the_comment a {
+color:#1a7dc7;
+}
+
+.commentlist .the_comment a:hover,.comment-author a:hover {
+color:#1a7dc7;
+text-decoration:underline;
+}
+
+/*------------------------------------------------------
+  				Top BlogPage Post Info
+  ------------------------------------------------------*/	
+
+.postinfo
+{
+background:#0b61a6;
+padding:3px 10px;
+color:#FFFFFF;
+line-height:22px;
+}
+.postinfo a
+{
+color:#FFFFFF;
+padding:3px 3px;
+}
+.comments a
+{
+background:#525e6c;
+padding:3px 10px;
+color:#FFFFFF;
+}
+.detailview
+{
+background:#7e8996;
+padding:3px 10px;
+color:#FFFFFF;
+}
+
+.postlink
+{
+border-bottom:1px solid #d0dae5;
+font:normal 10px/16px Tahoma, Helvetica, sans-serif;
+letter-spacing:0;
+padding:3px 10px;
+display:compact;
+color:#3a3a3a;
+
+}
+
+/*------------------------------------------------------
+  				Blogpage Box
+  ------------------------------------------------------*/	
+
+.blogbox 
+{
+padding:20px;
+overflow:auto;
+height:100%;
+}
+
+.blogbox img
+{
+margin-right:20px;
+}
+div.blogbox p
+{
+padding:20px 0 5px 0;
+overflow:auto;
+height:100%;
+}
+
+.avatarimg
+{
+background:#FFFFFF;
+padding:5px;
+border:1px solid #cdcdcd;
+}
+.avatarimg:hover
+{
+background:#FFFFFF;
+padding:5px;
+border:1px solid #6c6c6c;
+}
+/*------------------------------------------------------
+  				Comment Page form
+  ------------------------------------------------------*/	
+
+#commentform input {
+	width: 170px;
+	padding: 5px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform {
+	margin: 5px 10px 0 0;
+	}
+#commentform textarea {
+	width: 500px;
+	padding: 2px;
+	}
+#respond:after {
+		content: "."; 
+	    display: block; 
+	    height: 0; 
+	    clear: both; 
+	    visibility: hidden;
+	}
+#commentform #submit {
+	margin: 0 0 5px auto;
+	float: left;
+	}
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+#commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+#respond:after {
+		content: "."; 
+	    display: block; 
+	    height: 0; 
+	    clear: both; 
+	    visibility: hidden;
+	}
+/*------------------------------------------------------
+  				Blog Page Box Bottom Bar
+  ------------------------------------------------------*/	
+
+.bottomblog
+{
+background:#fafcfe url(../images/boxbar.gif) top left repeat-x;
+padding:10px;
+overflow:auto;
+height:100%;
+border:1px solid #b1d0ea;
+border-top:0;
+}

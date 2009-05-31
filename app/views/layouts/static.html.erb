@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title><%= @page_title ? "#{@page_title} | #{AppConfig['app_name']}" : AppConfig['app_name'] %></title>
+		<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type"/>
+		<%= stylesheet_link_tag 'reset.css', '960.css', 'styles.css', 'menu.css', 'custom' %>
+		<%= yield :head %>
+	</head>
+	<body>
+		<!-- Header -->
+		<%= render :partial => 'layouts/header' %>
+	
+		<!-- Page Teasers -->
+		<% if controller_action_is('static', 'index') -%>
+		<%= render :partial => 'layouts/mainheader' %>
+		<%= render :partial => 'layouts/features' %>
+		<% else -%>
+		<%= render :partial => 'layouts/subpageheader' %>
+		<% end -%>	
+	
+		<!-- Page content -->
+		<%= yield -%>
+		
+		<!-- Footer -->
+		<%= render :partial => 'layouts/footer' %>
+	</body>
+</html>

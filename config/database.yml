@@ -17,7 +17,7 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: subscriptions
+  database: recruitapp_development
   username: root
   password:
 
@@ -27,13 +27,13 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: subscriptions_test
+  database: recruitapp_test
   username: root
   password:
 
 production:
   adapter: mysql
   encoding: utf8
-  database: subscriptions_production
+  database: recruitapp_production
   username: root
   password: 
