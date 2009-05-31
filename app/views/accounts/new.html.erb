@@ -1,65 +1,98 @@
-<h1>Create an account</h1>
+<% @page_title = "Create an account" %>
+<% @page_description = "Thank you for choosing the #{AppConfig['app_name']} #{@account.plan.name} subscription." -%>
 
-<% form_tag :action => 'create' do %>
-  <%= hidden_field_tag 'plan', params[:plan] %>
-  <p>
-    Enter the name of your business and the subdomain you'd like to use for your site.
-  </p>
-  
-  <% if @account.errors.any? %>
-    <div class="errorExplanation">
-      <h2>Errors encountered with your account information:</h2>
-      <ul>
-        <%= @account.errors.full_messages.map {|m| content_tag('li', m)} %>
-      </ul>
-    </div>
-  <% end %>
-  
-  <fieldset>
-    <% fields_for :account do |f| %>
-      <%= f.text_field :name %>
-      <%= f.text_field :domain %>.<%= AppConfig['base_domain'] %>
-    <% end %>
-  </fieldset>
-  
-  <p>
-    Enter info for the administrator account.
-  </p>
-  <fieldset>  
-    <% fields_for :user do |f| %>
-      <%= f.text_field :login %>
-      <%= f.text_field :email %>
-      <label for="user_password">Password</label>
-      <%= f.password_field :password %>
-      <label for="user_password_confirmation">Password Confirmation</label>
-      <%= f.password_field :password_confirmation %>
-    <% end %>
-  </fieldset>  
-  
-  <% if @account.needs_payment_info? %>
-    <p>
-      Enter your payment info
-    </p>
-    
-    <%= render :partial => "shared/credit_card_form" %>
-  <% end %>
-  
-  <br/>
-  
-  <fieldset>
-    <label>Discount Code</label>
-    <%= text_field_tag :discount, params[:discount] %>
-  </fieldset>
-  
-  <br/>
-  
-  <fieldset>
-    <% content_tag(:p) do %>
-      Your card will be charged <%= number_to_currency(@account.plan.setup_amount) + ' now and ' if  @account.plan.setup_amount? && !@account.plan.trial_period? %> <%= number_to_currency(@account.plan.amount) %> 
-      <%= @account.plan.renewal_period == 1 ? 'every month' : "every #{@account.plan.renewal_period} months" %>.
-    <% end if @account.needs_payment_info? %>
+<div class="content cbg">
+      <div class="container_16 linebg">
+            <!--left part of text follows here-->
+            <div class="grid_11 para sepline">
+                  <div class="text">
+                        <br />
+                        <!-- Contact Form Start -->
+												<% form_tag :action => 'create' do %>
+												  <%= hidden_field_tag 'plan', params[:plan] %>
 
-    <input type="submit" value="Create my account" />
-  </fieldset>
-  
-<% end %>
+												  <% if @account.errors.any? %>
+												    <div class="errorExplanation">
+												      <h2>Errors encountered with your account information:</h2>
+												      <ul>
+												        <%= @account.errors.full_messages.map {|m| content_tag('li', m)} %>
+												      </ul>
+												    </div>
+												  <% end %>
+
+													<!-- Business Name and Account ID -->
+												  <h5>Enter the name of your business and the subdomain you'd like to use for your site.</h5>												
+												  <fieldset>
+												    <% fields_for :account do |f| %>
+													  <p>Your business name *
+															<%= f.text_field :name, :class => 'txtarea required' %>
+	                          </p>
+													  <p>Your <%= AppConfig['app_name'] %> ID *
+	                                <%= f.text_field :domain %>.<%= AppConfig['base_domain'] %>
+	                          </p>
+												    <% end %>
+												  </fieldset>
+
+													<!-- Administrator settings -->
+												  <h5>Enter info for the administrator account.</h5>
+												  <fieldset>  
+												    <% fields_for :user do |f| %>
+													  <p>Username *
+															<%= f.text_field :login, :class => 'txtarea required' %>
+	                          </p>
+													  <p>Email *
+															<%= f.text_field :email, :class => 'txtarea required' %>
+	                          </p>
+													  <p>Password *
+															<%= f.password_field :password, :class => 'txtarea required' %>
+	                          </p>
+													  <p>Password Confirmation *
+															<%= f.password_field :password_confirmation, :class => 'txtarea required' %>
+	                          </p>
+												    <% end %>
+												  </fieldset>  
+
+												  <% if @account.needs_payment_info? %>
+												    <h5>Enter your billing information [SECURE]</h5>
+												    <%= render :partial => "shared/credit_card_form" %>
+												  <% end %>
+
+												  <br/>
+
+													<!-- Discount stuff -->
+												  <fieldset>
+													  <p>Discount Code
+															<%= text_field_tag :discount, params[:discount] %>
+	                          </p>
+												  </fieldset>
+
+												  <br/>
+
+												  <fieldset>
+												    <% content_tag(:p) do %>
+												      Your card will be charged <%= number_to_currency(@account.plan.setup_amount) + ' now and ' if  @account.plan.setup_amount? && !@account.plan.trial_period? %> <%= number_to_currency(@account.plan.amount) %> 
+												      <%= @account.plan.renewal_period == 1 ? 'every month' : "every #{@account.plan.renewal_period} months" %>.
+												    <% end if @account.needs_payment_info? %>
+
+												    <input type="submit" value="Create my account" />
+												  </fieldset>
+
+												<% end %>
+                        <!-- Contact Form end -->
+                  </div>
+            </div>
+            <!--End of the Left part text  -->
+            <!--Right part of text follows here-->
+            <div class="grid_5">
+                  <div class="text">
+                        <h5>Subscription Details</h5>
+                        <p><strong>Your <%= "#{@account.plan.name}" -%> subscription will allow you create 50 invoices each month.</strong> Remember, all invoices created are counted towards your monthly invoice total, regardless of who created them.</p>
+                  </div>
+                  <div class="text">
+                        <h5>Is it easy to upgrade, downgrade, or cancel my <%= AppConfig['app_name'] -%> subscription?</h5>
+                        <p><strong>Yes, you may upgrade, downgrade, or cancel your subscription at any time.</strong> There are no additional charges to change your plan, and there are no cancellation fees.</p>
+                  </div>
+            </div>
+            <!--End of the Right part text  -->
+      </div>
+</div>

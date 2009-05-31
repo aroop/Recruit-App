@@ -13219,3 +13219,2150 @@ ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:pro
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#plans (for 127.0.0.1 at 2009-05-30 19:14:58) [GET]
+  Parameters: {"action"=>"plans", "controller"=>"accounts"}
+  [4;36;1mSubscriptionPlan Load (0.5ms)[0m   [0;1mSELECT * FROM `subscription_plans` ORDER BY amount desc[0m
+Rendering template within layouts/static
+Rendering accounts/plans
+  [4;35;1mSubscriptionPlan Columns (11.9ms)[0m   [0mSHOW FIELDS FROM `subscription_plans`[0m
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 68ms (View: 24, DB: 13) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:15:01) [GET]
+  Parameters: {"plan"=>"Free", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (13.7ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.3ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Free') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered layouts/_header (11.1ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (7.6ms)
+Completed in 261ms (View: 140, DB: 19) | 200 OK [http://localhost/signup/Free]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:15:01) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:15:07) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.4ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (2.7ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (24.3ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 197ms (View: 69, DB: 20) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:15:08) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:15:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:18:19) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.4ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.0ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 194ms (View: 72, DB: 16) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:18:20) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:18:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:20:26) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (14.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (7.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (2.9ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (42.4ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.4ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 385ms (View: 163, DB: 38) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (13.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:20:27) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (21.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:20:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:20:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:21:14) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (10.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.1ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (20.7ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 198ms (View: 77, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:15) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:21:22) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (10.7ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.3ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (23.1ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 202ms (View: 79, DB: 15) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:22) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:21:32) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.8ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.3ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (22.5ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 207ms (View: 77, DB: 19) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:32) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (24.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:21:38) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.2ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (23.2ms)
+Rendered layouts/_header (0.9ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 198ms (View: 78, DB: 16) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:39) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (6.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:21:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:22:07) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.1ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (2.6ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.0ms)
+Rendered layouts/_header (1.1ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 198ms (View: 76, DB: 18) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:22:08) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:22:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:22:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:22:26) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (17.6ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (3.2ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.4ms)
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::APP_CONFIG) on line #87 of app/views/accounts/new.html.erb:
+84:                               CA 95670</p>
+85:                   </div>
+86:                   <div class="text">
+87:                         <h5>Is it easy to upgrade, downgrade, or cancel my <%= APP_CONFIG['app_name'] -%> subscription?</h5>
+88:                         <p><strong>Yes, you may upgrade, downgrade, or cancel your subscription at any time.</strong> There are no additional charges to change your plan, and there are no cancellation fees.</p>
+89:                   </div>
+90:             </div>
+
+    app/views/accounts/new.html.erb:87
+    app/controllers/accounts_controller.rb:14:in `new'
+
+Rendered rescues/_trace (136.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:22:51) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.2ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.2ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (22.2ms)
+Rendered layouts/_header (0.9ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 207ms (View: 81, DB: 18) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:22:52) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:22:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:22:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:23:48) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (10.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.4ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (22.5ms)
+Rendered layouts/_header (0.9ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 198ms (View: 77, DB: 16) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:23:49) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (7.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:23:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:23:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:24:32) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.2ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.5ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 195ms (View: 76, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (6.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:24:32) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:24:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (6.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:24:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:25:18) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.6ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.4ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (20.9ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 195ms (View: 74, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:25:19) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:25:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (4.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:25:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:25:53) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (89.7ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (20.5ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (2.5ms)
+Completed in 275ms (View: 75, DB: 94) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:25:54) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:25:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:25:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:26:16) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.7ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.2ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.1ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 200ms (View: 77, DB: 20) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:26:16) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:26:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:26:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:26:31) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (20.6ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 186ms (View: 77, DB: 8) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (5.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:26:32) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:26:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:26:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:26:51) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.4ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (20.9ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 203ms (View: 78, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:26:52) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:26:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:26:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#contact (for 127.0.0.1 at 2009-05-30 19:27:05) [GET]
+  Parameters: {"action"=>"contact", "controller"=>"static"}
+Rendering template within layouts/static
+Rendering static/contact
+Rendered layouts/_header (1.2ms)
+Rendered layouts/_subpageheader (0.4ms)
+Rendered layouts/_footer (1.5ms)
+Completed in 33ms (View: 14, DB: 0) | 200 OK [http://localhost/contact]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:27:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:28:52) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.4ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.1ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (20.8ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 196ms (View: 77, DB: 18) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (17.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:28:53) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:28:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (61.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:28:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:29:18) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.4ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.2ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (22.2ms)
+Rendered layouts/_header (0.9ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 309ms (View: 77, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:29:18) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (5.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:29:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (12.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:29:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:30:02) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (13.3ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.4ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+ERROR: compiling _run_erb_app47views47accounts47new46html46erb RAISED compile error
+/Users/ajay/Development/RecruitApp/app/views/accounts/new.html.erb:30: syntax error, unexpected '='
+...t(( f.text_field :name, class='txtarea required' ).to_s); @o...
+                              ^
+Function body:           def _run_erb_app47views47accounts47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  @page_title = "Create an account" ; @output_buffer.concat "\n"
+;  @page_description = "Thank you for choosing the #{AppConfig['app_name']} #{@account.plan.name} subscription." 
+@output_buffer.concat "\n<div class=\"content cbg\">\n      <div class=\"container_16 linebg\">\n            <!--left part of text follows here-->\n            <div class=\"grid_11 para sepline\">\n                  <div class=\"text\">\n                        <br />\n                        <!-- Contact Form Start -->\n\t\t\t\t\t\t\t\t\t\t\t\t"
+
+
+
+
+
+
+
+;  form_tag :action => 'create' do ; @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t  "
+; @output_buffer.concat(( hidden_field_tag 'plan', params[:plan] ).to_s); @output_buffer.concat "\n\n\t\t\t\t\t\t\t\t\t\t\t\t  "
+
+;  if @account.errors.any? ; @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t    <div class=\"errorExplanation\">\n\t\t\t\t\t\t\t\t\t\t\t\t      <h2>Errors encountered with your account information:</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t      <ul>\n\t\t\t\t\t\t\t\t\t\t\t\t        "
+
+
+
+; @output_buffer.concat(( @account.errors.full_messages.map {|m| content_tag('li', m)} ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t      </ul>\n\t\t\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t\t\t  "
+
+
+;  end ; @output_buffer.concat "\n\n\t\t\t\t\t\t\t\t\t\t\t\t  <h5>\n\t\t\t\t\t\t\t\t\t\t\t\t    Enter the name of your business and the subdomain you'd like to use for your site.\n\t\t\t\t\t\t\t\t\t\t\t\t  </h5>\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t  <fieldset>\n\t\t\t\t\t\t\t\t\t\t\t\t    "
+
+
+
+
+
+
+;  fields_for :account do |f| ; @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t\t  <p>What is the name of your company or organization? *\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
+
+; @output_buffer.concat(( f.text_field :name, class='txtarea required' ).to_s); @output_buffer.concat "\n\t                          </p>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t  <p>First Name *\n\t                                <input type='text' value='' size='50' maxlength='50' name='name' class='txtarea required'/>\n\t                          </p>\n\n\t\t\t\t\t\t\t\t\t\t\t\t      \n\t\t\t\t\t\t\t\t\t\t\t\t      "
+
+
+
+
+
+
+
+; @output_buffer.concat(( f.text_field :domain ).to_s); @output_buffer.concat "."; @output_buffer.concat(( AppConfig['base_domain'] ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t    "
+;  end ; @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t  </fieldset>\n\n\t\t\t\t\t\t\t\t\t\t\t\t  <p>\n\t\t\t\t\t\t\t\t\t\t\t\t    Enter info for the administrator account.\n\t\t\t\t\t\t\t\t\t\t\t\t  </p>\n\t\t\t\t\t\t\t\t\t\t\t\t  <fieldset>  \n\t\t\t\t\t\t\t\t\t\t\t\t    "
+
+
+
+
+
+
+;  fields_for :user do |f| ; @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t      "
+; @output_buffer.concat(( f.text_field :login ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t      "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t      <label for=\"user_password\">Password</label>\n\t\t\t\t\t\t\t\t\t\t\t\t      "
+
+; @output_buffer.concat(( f.password_field :password ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t      <label for=\"user_password_confirmation\">Password Confirmation</label>\n\t\t\t\t\t\t\t\t\t\t\t\t      "
+
+; @output_buffer.concat(( f.password_field :password_confirmation ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t    "
+;  end ; @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t  </fieldset>  \n\n\t\t\t\t\t\t\t\t\t\t\t\t  "
+
+
+;  if @account.needs_payment_info? ; @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t    <p>\n\t\t\t\t\t\t\t\t\t\t\t\t      Enter your payment info\n\t\t\t\t\t\t\t\t\t\t\t\t    </p>\n\n\t\t\t\t\t\t\t\t\t\t\t\t    "
+
+
+
+
+; @output_buffer.concat(( render :partial => "shared/credit_card_form" ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t  "
+;  end ; @output_buffer.concat "\n\n\t\t\t\t\t\t\t\t\t\t\t\t  <br/>\n\n\t\t\t\t\t\t\t\t\t\t\t\t  <fieldset>\n\t\t\t\t\t\t\t\t\t\t\t\t    <label>Discount Code</label>\n\t\t\t\t\t\t\t\t\t\t\t\t    "
+
+
+
+
+
+; @output_buffer.concat(( text_field_tag :discount, params[:discount] ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t  </fieldset>\n\n\t\t\t\t\t\t\t\t\t\t\t\t  <br/>\n\n\t\t\t\t\t\t\t\t\t\t\t\t  <fieldset>\n\t\t\t\t\t\t\t\t\t\t\t\t    "
+
+
+
+
+
+;  content_tag(:p) do ; @output_buffer.concat "\n\t\t\t\t\t\t\t\t\t\t\t\t      Your card will be charged "
+; @output_buffer.concat(( number_to_currency(@account.plan.setup_amount) + ' now and ' if  @account.plan.setup_amount? && !@account.plan.trial_period? ).to_s); @output_buffer.concat " "; @output_buffer.concat(( number_to_currency(@account.plan.amount) ).to_s); @output_buffer.concat " \n\t\t\t\t\t\t\t\t\t\t\t\t      "
+; @output_buffer.concat(( @account.plan.renewal_period == 1 ? 'every month' : "every #{@account.plan.renewal_period} months" ).to_s); @output_buffer.concat ".\n\t\t\t\t\t\t\t\t\t\t\t\t    "
+;  end if @account.needs_payment_info? ; @output_buffer.concat "\n\n\t\t\t\t\t\t\t\t\t\t\t\t    <input type=\"submit\" value=\"Create my account\" />\n\t\t\t\t\t\t\t\t\t\t\t\t  </fieldset>\n\n\t\t\t\t\t\t\t\t\t\t\t\t"
+
+
+
+
+;  end ; @output_buffer.concat "\n                        <!-- Contact Form end -->\n                  </div>\n            </div>\n            <!--End of the Left part text  -->\n            <!--Right part of text follows here-->\n            <div class=\"grid_5\">\n                  <div class=\"text\">\n                        <h5>Subscription Details</h5>\n                        <p><strong>Your "
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( "#{@account.plan.name}" ).to_s); @output_buffer.concat " subscription will allow you create 50 invoices each month.</strong> Remember, all invoices created are counted towards your monthly invoice total, regardless of who created them.</p>\n                  </div>\n                  <div class=\"text\">\n                        <h5>Is it easy to upgrade, downgrade, or cancel my "
+
+
+; @output_buffer.concat(( AppConfig['app_name'] ).to_s); @output_buffer.concat " subscription?</h5>\n                        <p><strong>Yes, you may upgrade, downgrade, or cancel your subscription at any time.</strong> There are no additional charges to change your plan, and there are no cancellation fees.</p>\n                  </div>\n            </div>\n            <!--End of the Right part text  -->\n      </div>\n</div>"
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ajay/Development/RecruitApp/app/views/accounts/new.html.erb:103:in `compile!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:978:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ajay/Development/RecruitApp/app/controllers/accounts_controller.rb:14:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ajay/Development/RecruitApp/app/views/accounts/new.html.erb:30: syntax error, unexpected '='
+...t(( f.text_field :name, class='txtarea required' ).to_s); @o...
+                              ^) on line #30 of app/views/accounts/new.html.erb:
+27: 												  <fieldset>
+28: 												    <% fields_for :account do |f| %>
+29: 													  <p>What is the name of your company or organization? *
+30: 															<%= f.text_field :name, class='txtarea required' %>
+31: 	                          </p>
+32: 
+33: 													  <p>First Name *
+
+    app/views/accounts/new.html.erb:103:in `compile!'
+    app/controllers/accounts_controller.rb:14:in `new'
+
+Rendered rescues/_trace (238.5ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:30:12) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.4ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.0ms)
+Rendered layouts/_header (0.9ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 205ms (View: 79, DB: 15) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:30:12) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:30:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:30:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:30:28) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.4ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.1ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.9ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 301ms (View: 177, DB: 18) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:30:29) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:30:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:30:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost", :subdomain=>""}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:31:41) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.1ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (118.1ms)
+Rendered layouts/_header (4.7ms)
+Rendered layouts/_subpageheader (1.8ms)
+Rendered layouts/_footer (1.9ms)
+Completed in 347ms (View: 229, DB: 10) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (14.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:31:41) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (8.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (32.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:31:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:31:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#contact (for 127.0.0.1 at 2009-05-30 19:32:12) [GET]
+  Parameters: {"action"=>"contact", "controller"=>"static"}
+Rendering template within layouts/static
+Rendering static/contact
+Rendered layouts/_header (1.1ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 50ms (View: 32, DB: 0) | 200 OK [http://localhost/contact]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:32:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:32:16) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.2ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.1ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 180ms (View: 59, DB: 16) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:32:17) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:32:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:32:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:33:50) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.4ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (22.9ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 194ms (View: 75, DB: 16) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:33:51) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:33:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:33:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:34:18) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (10.8ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.4ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.7ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 205ms (View: 82, DB: 15) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:34:19) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (10.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:34:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:34:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:35:24) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.1ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.3ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (25.9ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 197ms (View: 78, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:35:24) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:35:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:35:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:36:04) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.6ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (4.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.3ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (22.2ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 194ms (View: 75, DB: 21) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:36:05) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:36:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (5.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:36:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:36:39) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (10.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (4.7ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.6ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.1ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 206ms (View: 78, DB: 20) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:36:40) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:36:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:36:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:37:23) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (14.5ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (20.7ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 198ms (View: 76, DB: 19) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:37:24) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:37:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:37:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:37:48) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.5ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.1ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (24.6ms)
+Rendered layouts/_header (1.1ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 210ms (View: 84, DB: 19) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:37:48) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:37:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (5.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:37:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:38:33) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.1ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.7ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.5ms)
+Rendered layouts/_header (1.1ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 201ms (View: 78, DB: 16) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:38:33) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:38:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:38:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:39:39) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.8ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.3ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (29.8ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 212ms (View: 89, DB: 20) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:39:40) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:39:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:39:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:40:00) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (10.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.4ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (31.3ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 197ms (View: 76, DB: 15) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:40:01) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (11.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:40:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:40:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:40:23) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (10.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.6ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (21.0ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 201ms (View: 77, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:40:23) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:40:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:40:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:41:11) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.5ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (4.5ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.1ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (29.5ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 201ms (View: 76, DB: 21) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:41:12) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:41:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:41:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:42:24) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (12.8ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (29.9ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 192ms (View: 75, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (5.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:42:25) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:42:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:42:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:43:16) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.3ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (31.2ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 302ms (View: 75, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:43:17) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:43:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/cvv.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/cvv.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:43:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:44:00) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.1ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (1.2ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (23.7ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 181ms (View: 62, DB: 16) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:44:00) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (9.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:44:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:44:24) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (13.7ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (32.5ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 197ms (View: 78, DB: 18) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:44:25) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:44:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:46:16) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (10.8ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.5ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (34.9ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.3ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 201ms (View: 79, DB: 16) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:46:17) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:46:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2009-05-30 19:46:33) [GET]
+  Parameters: {"plan"=>"Solo", "action"=>"new", "controller"=>"accounts"}
+  [4;36;1mAccount Columns (11.7ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSubscriptionPlan Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `subscription_plans`[0m
+  [4;35;1mSubscriptionPlan Load (0.3ms)[0m   [0mSELECT * FROM `subscription_plans` WHERE (`subscription_plans`.`name` = 'Solo') LIMIT 1[0m
+Rendering template within layouts/static
+Rendering accounts/new
+Rendered shared/_credit_card_form (27.6ms)
+Rendered layouts/_header (1.0ms)
+Rendered layouts/_subpageheader (0.4ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 197ms (View: 76, DB: 17) | 200 OK [http://localhost/signup/Solo]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (5.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:46:34) [GET]
+
+ActionController::RoutingError (No route matches "/signup/images/logo.png" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/signup/images/logo.png", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (3.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (7.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-30 19:46:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/bgbsox.gif" with {:protocol=>"http://", :remote_ip=>"127.0.0.1", :subdomain=>"", :content_type=>nil, :port=>3000, :accepts=>"image/png,image/*,*/*", :method=>:get, :request_uri=>"/images/bgbsox.gif", :domain=>"localhost"}):
+  
+
+Rendering rescues/layout (not_found)
