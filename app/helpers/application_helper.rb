@@ -25,5 +25,19 @@ module ApplicationHelper
   def controller_action_is(c,a) # <= check for controller and action
     controller_is(c) && action_is(a)
   end
+  
+  def month_array
+    array_months = []
+    Date::MONTHNAMES.each_with_index do |element, index|
+      if (index > 0)
+        array_months << ["#{index} - #{element}", index]
+      end
+    end
+    array_months
+  end
+  
+  def credit_card_types
+    [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]]
+  end
 
 end

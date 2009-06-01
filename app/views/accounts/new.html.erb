@@ -8,7 +8,7 @@
                   <div class="text">
                         <br />
                         <!-- Contact Form Start -->
-												<% form_tag :action => 'create' do %>
+												<% form_tag ({:action => 'create'}, {:class => "signupform"}) do %>
 												  <%= hidden_field_tag 'plan', params[:plan] %>
 
 												  <% if @account.errors.any? %>
@@ -24,11 +24,13 @@
 												  <h5>Enter the name of your business and the subdomain you'd like to use for your site.</h5>												
 												  <fieldset>
 												    <% fields_for :account do |f| %>
-													  <p>Your business name *
-															<%= f.text_field :name, :class => 'txtarea required' %>
+													  <p>
+														<label>Your business name *</label>
+														<%= f.text_field :name, :class => 'txtarea required' %>
 	                          </p>
-													  <p>Your <%= AppConfig['app_name'] %> ID *
-	                                <%= f.text_field :domain %>.<%= AppConfig['base_domain'] %>
+													  <p>
+														<label>Your <%= AppConfig['app_name'] %> ID *</label>
+	                          <%= f.text_field :domain %>.<%= AppConfig['base_domain'] %>
 	                          </p>
 												    <% end %>
 												  </fieldset>
@@ -37,16 +39,18 @@
 												  <h5>Enter info for the administrator account.</h5>
 												  <fieldset>  
 												    <% fields_for :user do |f| %>
-													  <p>Username *
-															<%= f.text_field :login, :class => 'txtarea required' %>
+													  <p>
+														<label>Username *</label>
+														<%= f.text_field :login, :class => 'txtarea required' %>
 	                          </p>
-													  <p>Email *
-															<%= f.text_field :email, :class => 'txtarea required' %>
+													  <p>
+														<label>Email *</label>
+														<%= f.text_field :email, :class => 'txtarea required' %>
 	                          </p>
-													  <p>Password *
+													  <p><label>Password *</label>
 															<%= f.password_field :password, :class => 'txtarea required' %>
 	                          </p>
-													  <p>Password Confirmation *
+													  <p><label>Password Confirmation *</label>
 															<%= f.password_field :password_confirmation, :class => 'txtarea required' %>
 	                          </p>
 												    <% end %>
@@ -57,17 +61,14 @@
 												    <%= render :partial => "shared/credit_card_form" %>
 												  <% end %>
 
-												  <br/>
-
 													<!-- Discount stuff -->
+													<h5>Have a Coupon?</h5>
 												  <fieldset>
-													  <p>Discount Code
-															<%= text_field_tag :discount, params[:discount] %>
+													  <p><label>Discount Code</label>
+															<%= text_field_tag :discount, params[:discount], :class => 'txtarea required', :size=>"30" %>
 	                          </p>
 												  </fieldset>
-
-												  <br/>
-
+													
 												  <fieldset>
 												    <% content_tag(:p) do %>
 												      Your card will be charged <%= number_to_currency(@account.plan.setup_amount) + ' now and ' if  @account.plan.setup_amount? && !@account.plan.trial_period? %> <%= number_to_currency(@account.plan.amount) %> 

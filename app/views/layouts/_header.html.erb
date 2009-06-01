@@ -1,6 +1,6 @@
 <div class="top_bg">
       <div class="container_16">
-            <div class="grid_5"><a href="#"><img src="images/logo.png" class="logo" alt="Memix" /></a></div>
+            <div class="grid_5"><a href="#"><img src="/images/logo.png" class="logo" alt="Memix" /></a></div>
             <!-- Top menu Start -->
             <div class="grid_11 menu">
                   <ul>
@@ -10,7 +10,7 @@
 												<li <%= controller_action_is("static", "tour")? "class=current" : "" -%> >
 													<%= link_to "<span>Tour</span>", tour_path %>
 												</li>
-												<li <%= controller_action_is("accounts", "plans")? "class=current" : "" -%> >
+												<li <%= (controller_action_is("accounts", "plans") || controller_action_is("accounts", "new"))? "class=current" : "" -%> >
 													<%= link_to "<span>Pricing & Signup</span>", plans_path %>
 												</li>
 												<li <%= controller_action_is("static", "blog")? "class=current" : "" -%> >

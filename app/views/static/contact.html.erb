@@ -10,26 +10,26 @@
                         <p> <strong>If you’re a user and you need technical support, email us at <%= mail_to AppConfig['from_email'], AppConfig['from_email'], :encode => "hex" -%>. </strong> </p>
                         <br />
                         <!-- Contact Form Start -->
-                        <form action="contactsent.php" method="post" name="form1" id="form1" style="margin:0px; font:Normal 12px Arial,Tahoma, Verdana, Helvetica, sans-serif;width:200px; color:#000;">
-                              <p>First Name *
+                        <% form_tag ({:action => 'send'}, {:class => "signupform"}) do %>
+                              <p><label>First Name *</label>
                                     <input type='text' value='' size='50' maxlength='50' name='name' class='txtarea required'/>
                               </p>
-                              <p>Your e-mail *
+                              <p><label>Your e-mail *</label>
                                     <input name="email" type="text" size='50'  id="from" value="" class="required" />
                               </p>
-                              <p>Company Name
+                              <p><label>Company Name</label>
                                     <input type='text' value='' size='50' maxlength='50' name='company'/>
                               </p>
-                              <p>Subject:
+                              <p><label>Subject:</label>
                                     <input name="subject" type="text" id="subject" size='50'  value=""/>
                               </p>
-                              <p>Message *
-                                    <textarea name="message" cols="38" rows="5" id="message"></textarea>
+                              <p><label>Message *</label>
+                                    <textarea name="message" cols="43" rows="5" id="message"></textarea>
                               </p>
-                              <p>
+                              <p class="buttons">
                                     <input name="Submit" class="" type="image" src="images/submit.gif" value="Send Message"/>
                               </p>
-                        </form>
+                        <% end %>
                         <!-- Contact Form end -->
                   </div>
             </div>

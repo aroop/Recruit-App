@@ -32,48 +32,47 @@
     <h2><input type="radio" name="paypal" value=" " <%= 'checked="checked"' unless @subscription.paypal? %>> Pay with a credit card</h2>
   <% end %>
 
-  <h5>Name on Card</h5>
-  <p>First Name *
-		<%= text_field :creditcard, :first_name, :size => 20, :class => 'txtarea required' %>
+  <p><label>First Name *</label>
+		<%= text_field :creditcard, :first_name, :size => 30, :class => 'txtarea required' %>
   </p>
-  <p>Last Name *
-		<%= text_field :creditcard, :last_name, :size => 20, :class => 'txtarea required' %>
+  <p><label>Last Name *</label>
+		<%= text_field :creditcard, :last_name, :size => 30, :class => 'txtarea required' %>
   </p>
-  <p>Card Number *
-		<%= text_field :creditcard, :number, :size => 20, :class => 'txtarea required' %>
+  <p><label>Card Number *</label>
+		<%= text_field :creditcard, :number, :size => 30, :class => 'txtarea required' %>
   </p>
-  <p>Type *
-		<%= select :creditcard, :type, [['Visa', 'visa'], ['MasterCard', 'master'], ['American Express', 'american_express']] %>
+  <p><label>Type *</label>
+		<%= select :creditcard, :type, credit_card_types %>
   </p>
-  <p>Expiration *
-	  <%= select :creditcard, :month, (1 .. 12) %>
-	  <%= select :creditcard, :year, (Time.now.year .. 10.years.from_now.year) %>
+  <p><label>Expiration *</label>
+	  <%= select :creditcard, :month, month_array %>
+	  <%= select :creditcard, :year, (Time.now.year .. 20.years.from_now.year) %>
   </p>
-  <p>CVV *
+  <p><label>CVV *</label>
 	  <%= text_field :creditcard, :verification_value, :size => 4 %>
 	  <%= image_tag('cvv.gif', :size => '51x31', :align => 'top') %>
   </p>
-  <p>Address 1
+  <!-- <p><label>Address 1</label>
 	  <%= text_field :address, :address1 %><br/>
   </p>
-  <p>Address 2
+  <p><label>Address 2</label>
 	  <%= text_field :address, :address2 %><br/>
   </p>
-  <p>City
+  <p><label>City</label>
 	  <%= text_field :address, :city %>
   </p>
-  <p>State
+  <p><label>State</label>
 	  <%= text_field :address, :state %>
   </p>
-  <p>Zip
+  <p><label>Zip</label>
 	  <%= text_field :address, :zip %>
   </p>
-  <p>Country
+  <p><label>Country</label>
 	  <%= country_select :address, :country, ['United States', 'Canada', 'India'] %>
   </p>
-  <p>Phone
+  <p><label>Phone</label>
 	  <%= text_field :address ,:phone %>
-  </p>
+  </p> -->
 </fieldset>
 
 <% if @subscription %>

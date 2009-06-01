@@ -61,3 +61,21 @@ a span.white{
 	text-align:center;
 	width:120px;
 }
+
+.signupform label {
+	width:140px;
+	float:left;
+}
+
+.signupform img {
+	vertical-align:	middle;
+	padding-bottom: 0px;
+}
+
+.signupform p.buttons {
+	margin-left: 140px;
+}
+
+.signupform p select {
+	padding-bottom: 0px;
+}
