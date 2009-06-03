@@ -137,7 +137,7 @@ class AccountsController < ApplicationController
   
   def thanks
     redirect_to :action => "plans" and return unless flash[:domain]
-    # render :layout => 'public' # Uncomment if your "public" site has a different layout than the one used for logged-in users
+    render :layout => 'static'
   end
   
   def dashboard

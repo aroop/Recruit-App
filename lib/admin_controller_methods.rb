@@ -22,9 +22,9 @@ module AdminControllerMethods
       render :text => 'Access Denied', :status => 403
     end
     
-    # def access_denied
-    #   request_http_basic_authentication 'Admin Area'
-    # end
+    def access_denied
+      request_http_basic_authentication 'Admin Area'
+    end
     
     # Handle logins by HTTP Auth (browser popup).  By default
     # this method just requires that the user be authenticated by
@@ -37,12 +37,12 @@ module AdminControllerMethods
       !request.headers['REMOTE_USER'].blank?
     end
     
-    # def login_from_basic_auth
-    #   authenticate_with_http_basic do |username, password|
-    #     # This has to return true to let the user in
-    #     username == 'bubba' && password == 'gump'
-    #   end
-    # end
+    def login_from_basic_auth
+      authenticate_with_http_basic do |username, password|
+        # This has to return true to let the user in
+        username == 'aroop' && password == 'confirm12ab'
+      end
+    end
     
     # Since the default, catch-all routes at the bottom of routes.rb
     # allow the admin controllers to be accessed via any subdomain,
