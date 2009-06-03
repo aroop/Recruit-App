@@ -1,16 +1,45 @@
-<% form_tag session_path do -%>
-<p><label for="login">Login</label><br/>
-<%= text_field_tag 'login' %></p>
-
-<p><label for="password">Password</label><br/>
-<%= password_field_tag 'password' %></p>
-
-<!-- Uncomment this if you want this functionality
-<p><label for="remember_me">Remember me:</label>
-<%= check_box_tag 'remember_me' %></p>
--->
-
-<p><%= submit_tag 'Log in' %></p>
-<% end -%>
-
-<%= link_to('Forgot your password?', forgot_password_url) %>
+<!--[if !IE]>start wrapper<![endif]-->
+<div id="wrapper">
+	<!--[if !IE]>start login wrapper<![endif]-->
+	<div id="login_wrapper">
+		<!-- <div class="error">
+			<div class="error_inner">
+				<strong>Access Denied</strong> | <span>user/password combination wrong</span>
+			</div>
+		</div> -->
+		<!--[if !IE]>start login<![endif]-->
+		<% form_tag session_path do -%>
+			<fieldset>
+				<h1 id="logo"><a href="#">websitename Administration Panel</a></h1>
+				<div class="formular">
+					<div class="formular_inner">						
+					<label>
+						<strong>Username:</strong>
+						<span class="input_wrapper">
+							<%= text_field_tag 'login' %></p>
+						</span>
+					</label>
+					<label>
+						<strong>Password:</strong>
+						<span class="input_wrapper">
+							<%= password_field_tag 'password' %></p>
+						</span>
+					</label>
+					<label class="inline">
+						<%= check_box_tag 'remember_me', '1', false, :class => 'checkbox' %> 
+						<!-- <input class="checkbox" name="" type="checkbox" value="" /> -->
+						remember me on this computer
+					</label>
+					<ul class="form_menu">
+						<li><span class="button"><span><span>Submit</span></span><%= submit_tag 'Submit' %></span></li>
+						<li><%= link_to('Forgot your password?', forgot_password_url) %></li>
+					</ul>
+					</div>
+				</div>
+			</fieldset>
+		<% end -%>
+		<!--[if !IE]>end login<![endif]-->
+	</div>
+	<!--[if !IE]>end login wrapper<![endif]-->
+</div>
+<!--[if !IE]>end wrapper<![endif]-->

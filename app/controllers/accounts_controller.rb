@@ -141,7 +141,7 @@ class AccountsController < ApplicationController
   end
   
   def dashboard
-    render :text => 'Dashboard action, engage!', :layout => true
+
   end
 
   protected

@@ -1,0 +1,21 @@
+<!--[if !IE]>start content<![endif]-->
+<div id="content">
+	
+	<!--[if !IE]>start page<![endif]-->
+	<div id="page">
+		<div class="inner">
+			<%= yield -%>
+		</div>
+	</div>
+	<!--[if !IE]>end page<![endif]-->
+	
+	<!--[if !IE]>start sidebar<![endif]-->
+	<div id="sidebar">
+		<div class="inner">
+			<%= yield :sidebar %>
+		</div>
+	</div>
+	<!--[if !IE]>end sidebar<![endif]-->
+	
+</div>
+<!--[if !IE]>end content<![endif]-->

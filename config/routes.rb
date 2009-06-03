@@ -35,11 +35,12 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
   
-  map.root :controller => "contacts"
+  map.dashboard '/dashboard', :controller => "accounts", :action => "dashboard"
+  map.root :dashboard
 
   # Login & Logout
   map.login 'login', :controller => 'sessions', :action => 'new'
-  map.login 'logout', :controller => 'sessions', :action => 'destroy'
+  map.logout 'logout', :controller => 'sessions', :action => 'destroy'
 
   # See how all your routes lay out with "rake routes"
   map.plans '/signup', :controller => 'accounts', :action => 'plans'

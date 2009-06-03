@@ -1,6 +1,10 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
   skip_before_filter :login_required, :except => :destroy
+  
+  def new
+    render :layout => 'applogin'
+  end
 
   def create
     logout_keeping_session!
@@ -19,7 +23,7 @@ class SessionsController < ApplicationController
       note_failed_signin
       @login       = params[:login]
       @remember_me = params[:remember_me]
-      render :action => 'new'
+      render :action => 'new', :layout => 'applogin'
     end
   end
 
