@@ -4,10 +4,11 @@ module MenuNavigation
     @menu_navigation = []
     @menu_navigation << MenuItem.new("Dashboard", dashboard_path)
     @menu_navigation << contacts_menu
-    @menu_navigation << MenuItem.new("Candidates", "/")
-    @menu_navigation << MenuItem.new("Companies", "")
-    @menu_navigation << MenuItem.new("Jobs", "")
-    @menu_navigation << MenuItem.new("Messages", "")
+    @menu_navigation << MenuItem.new("Companies", companies_path)
+    @menu_navigation << MenuItem.new("Candidates", candidates_path)
+    @menu_navigation << MenuItem.new("Jobs", jobs_path)
+    @menu_navigation << MenuItem.new("Messages", messages_path)
+    @menu_navigation << MenuItem.new("Analytics", "")
     @menu_navigation << MenuItem.new("Accounts", "")
   end
   
