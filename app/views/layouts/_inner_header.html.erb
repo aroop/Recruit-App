@@ -49,37 +49,24 @@
 	
 	<!--[if !IE]>start menus_wrapper<![endif]-->
 	<div id="menus_wrapper">
+		
 		<div id="main_menu">
-			<ul>
-				<li><a href="#" class="selected"><span><span>Dashboard</span></span></a></li>
-				<li><a href="#"><span><span>Contacts</span></span></a></li>
-				<li><a href="#"><span><span>Candidates</span></span></a></li>
-				<li><a href="#"><span><span>Companies</span></span></a></li>
-				<li><a href="#"><span><span>Jobs</span></span></a></li>
-				<li><a href="#"><span><span>Messages</span></span></a></li>
-				<li><a href="#"><span><span>Accounts</span></span></a></li>
+			<ul>	
+				<% controller.menu_navigation.each do |menu| -%>
+				<li><%= header_menu menu -%></li>
+				<% end -%>
 			</ul>
 		</div>
 		
 		<div id="sec_menu">
 			<ul>
-				<li><a href="#" class="sm1">Security Settings</a></li>
-				<li><a href="#" class="sm2">Chat and PMs</a></li>
-				<li><a href="#" class="sm3">Search Options</a></li>
-				<li><a href="#" class="sm4">Moderators</a></li>
-				<li><a href="#" class="sm5">Upload Options</a></li>
-				<li><a href="#" class="sm6">Download Options</a></li>
-				<li><a href="#" class="sm7">Emails</a></li>
-				<li>
-					<span class="drop"><span><span><a href="#" class="sm8">More</a></span></span></span>
-					<ul>
-						<li><a class="sm6" href="#">Download options</a></li>
-						<li><a class="sm4" href="#">Menu item</a></li>
-						<li><a class="sm6" href="#">Download options</a></li>
-						<li><a class="sm6" href="#">Download options</a></li>
-						<li><a class="sm6" href="#">Download options</a></li>
-					</ul>
-				</li>
+				<% controller.menu_navigation.each do |menu| -%>
+					<% if menu.active(controller) -%>
+						<% menu.children.each do |child| -%>
+						<li><%= link_to child.title, child.path, :class => child.html_class %></li>
+						<% end -%>
+					<% end -%>
+				<% end -%>								
 			</ul>
 		</div>
 	</div>

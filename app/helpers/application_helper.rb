@@ -39,5 +39,10 @@ module ApplicationHelper
   def credit_card_types
     [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]]
   end
+  
+  def header_menu(menu)
+    link_to "<span><span>#{menu.title}</span></span>", menu.path, :class => (menu.active(controller))? "selected" : ""
+    # link_to "<span><span>#{menu.title}</span></span>", menu.path, :class => current_page?(menu.path)? "selected" : ""
+  end
 
 end
