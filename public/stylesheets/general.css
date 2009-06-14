@@ -75,7 +75,7 @@ p {
 	height: 99px;
 	text-indent: -3000px;
 	overflow: hidden;
-	background:url(/images/layout/site/logo.gif) no-repeat;
+	background:url(/images/layout/site/logo.png) no-repeat;
 }
 #user_details {
 	float: right;
