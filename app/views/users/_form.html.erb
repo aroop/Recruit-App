@@ -1,11 +1,85 @@
-<%= error_messages_for :user %>
+<!--[if !IE]>start forms<![endif]-->
+<form action="#" class="search_form general_form">
+	<!--[if !IE]>start fieldset<![endif]-->
+	<fieldset>
+		<!--[if !IE]>start forms<![endif]-->
+		<div class="forms">
+		
+		
+			<%= error_messages_for :user %>
 
-<%= f.text_field :name %>
-<%= f.text_field :login %>
-<%= f.text_field :email %>
-<label>Password</label>
-<%= f.password_field :password %>
-<label>Password again</label>
-<%= f.password_field :password_confirmation %>
-
-<%= submit_or_cancel %>
+		
+		<!--[if !IE]>start row<![endif]-->
+		<div class="row">
+			<%= f.label :login, 'Login:' %>
+			<div class="inputs">
+				<span class="input_wrapper"><%= f.text_field :login, :class=>"text" %></span>
+			</div>
+		</div>
+		<!--[if !IE]>end row<![endif]-->
+		
+		<!--[if !IE]>start row<![endif]-->
+		<div class="row">
+			<%= f.label :name, 'Name:' %>
+			<div class="inputs">
+				<span class="input_wrapper"><%= f.text_field :name, :class=>"text" %></span>
+			</div>
+		</div>
+		<!--[if !IE]>end row<![endif]-->
+		
+		<!--[if !IE]>start row<![endif]-->
+		<div class="row">
+			<%= f.label :email, 'E-Mail:' %>
+			<div class="inputs">
+				<span class="input_wrapper"><%= f.text_field :email, :class=>"text" %></span>
+			</div>
+		</div>
+		<!--[if !IE]>end row<![endif]-->
+		
+		<!--[if !IE]>start row<![endif]-->
+		<div class="row">
+			<%= f.label :password, 'Password:' %>
+			<div class="inputs">
+				<span class="input_wrapper"><%= f.password_field :password, :class=>"text" %></span>
+			</div>
+		</div>
+		<!--[if !IE]>end row<![endif]-->
+		
+		<!--[if !IE]>start row<![endif]-->
+		<div class="row">
+			<%= f.label :password_confirmation, 'Confirm Password:' %>
+			<div class="inputs">
+				<span class="input_wrapper"><%= f.password_field :password_confirmation, :class=>"text" %></span>
+			</div>
+		</div>
+		<!--[if !IE]>end row<![endif]-->		
+		
+		<!--[if !IE]>start row<![endif]-->
+		<div class="row">
+			<div class="buttons">
+				
+				
+				<ul>
+					<li><span class="button send_form_btn"><span><span>Submit</span></span><input name="submit" type="submit" /></span></li>
+					<li><%= link_to "Cancel", users_path %></li>
+				</ul>
+				
+				
+				       
+			</div>
+		</div>
+		<!--[if !IE]>end row<![endif]-->
+		
+		
+		
+		</div>
+		<!--[if !IE]>end forms<![endif]-->
+		
+	</fieldset>
+	<!--[if !IE]>end fieldset<![endif]-->
+	
+	
+	
+	
+</form>
+<!--[if !IE]>end forms<![endif]-->	

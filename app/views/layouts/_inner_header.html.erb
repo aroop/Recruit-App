@@ -10,7 +10,7 @@
 				<li>Welcome <strong><%= current_user.login -%></strong></li>
 				<li>
 					<ul id="user_access">
-						<li class="first"><a href="#">My account</a></li>
+						<li class="first"><%= link_to "My account", edit_user_path(current_user) %></li>
 						<li class="last"><%= link_to "Log out", logout_path %></li>
 					</ul>
 				</li>

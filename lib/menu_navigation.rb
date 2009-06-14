@@ -9,7 +9,7 @@ module MenuNavigation
     @menu_navigation << jobs_menu
     @menu_navigation << MenuItem.new("Messages", messages_path)
     @menu_navigation << MenuItem.new("Analytics", "")
-    @menu_navigation << MenuItem.new("Accounts", "")
+    @menu_navigation << accounts_menu
   end
   
   def contacts_menu
@@ -38,6 +38,12 @@ module MenuNavigation
     jobs_menu.children << MenuItem.new("Add new", new_job_path, "sm1")
     jobs_menu.children << MenuItem.new("List", jobs_path, "sm2")
     jobs_menu
+  end
+  
+  def accounts_menu
+    accounts_menu = MenuItem.new("Accounts", users_path)
+    accounts_menu.children << MenuItem.new("Add new User", new_user_path, "sm1")
+    accounts_menu
   end
   
 end

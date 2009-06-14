@@ -1,0 +1,14 @@
+<tr class="<%= cycle("first", "second") -%>">
+	<td><%= user_row.name -%></td>
+	<td><%= user_row.email -%></td>
+	<td>Active</td>
+	<td><span class="approved">Admin</span></td>
+	<td style="width: 48px;">
+		<div class="actions">
+			<ul>
+				<li><%= link_to "Edit", edit_user_path(user_row), :class => "action1" %></li>
+				<li><a class="action4" href="#">4</a></li>
+			</ul>
+		</div>
+	</td>
+</tr>
