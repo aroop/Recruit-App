@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090531003056) do
+ActiveRecord::Schema.define(:version => 20090615012622) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -21,12 +21,78 @@ ActiveRecord::Schema.define(:version => 20090531003056) do
 
   add_index "accounts", ["full_domain"], :name => "index_accounts_on_full_domain"
 
+  create_table "addresses", :force => true do |t|
+    t.text     "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "candidates", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "address_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "email_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "emails", :force => true do |t|
+    t.integer  "email_type_id"
+    t.string   "value"
+    t.integer  "address_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jobs", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "password_resets", :force => true do |t|
     t.string   "email"
     t.integer  "user_id"
     t.string   "remote_ip"
     t.string   "token"
     t.datetime "created_at"
+  end
+
+  create_table "phone_number_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "phone_numbers", :force => true do |t|
+    t.integer  "phone_number_type_id"
+    t.string   "value"
+    t.integer  "address_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "subscription_discounts", :force => true do |t|
@@ -88,6 +154,11 @@ ActiveRecord::Schema.define(:version => 20090531003056) do
 
   add_index "subscriptions", ["account_id"], :name => "index_subscriptions_on_account_id"
 
+  create_table "tasks", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "login"
     t.string   "email"
@@ -103,5 +174,17 @@ ActiveRecord::Schema.define(:version => 20090531003056) do
   end
 
   add_index "users", ["account_id"], :name => "index_users_on_account_id"
+
+  create_table "website_types", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "websites", :force => true do |t|
+    t.string   "value"
+    t.integer  "website_type_id"
+    t.integer  "address_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
