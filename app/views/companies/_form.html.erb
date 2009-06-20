@@ -1,0 +1,40 @@
+	<!--[if !IE]>start fieldset<![endif]-->
+	<fieldset>
+		<!--[if !IE]>start forms<![endif]-->
+		<div class="forms">
+		
+			<%= error_messages_for :company %>
+		
+		<!--[if !IE]>start row<![endif]-->
+		<div class="row">
+			<%= f.label :Name, 'Name:' %>
+			<div class="inputs">
+				<span class="input_wrapper"><%= f.text_field :name, :class=>"text" %></span>
+			</div>
+		</div>
+		<!--[if !IE]>end row<![endif]-->
+		
+		<!--[if !IE]>start row<![endif]-->
+		<div class="row">
+			<%= f.label :description, 'Description:' %>
+			<div class="inputs">
+				<span class="input_wrapper textarea_wrapper"><%= f.text_area :description, :class=>"text" %></span>
+			</div>
+		</div>
+		<!--[if !IE]>end row<![endif]-->
+		
+		<!--[if !IE]>start row<![endif]-->
+		<div class="row">
+			<div class="buttons">
+				<ul>
+					<li><span class="button send_form_btn"><span><span>Add a company</span></span><input name="submit" type="submit" /></span></li>
+					<li><%= link_to "Cancel", companies_path %></li>
+				</ul>
+			</div>
+		</div>
+		<!--[if !IE]>end row<![endif]-->
+		</div>
+		<!--[if !IE]>end forms<![endif]-->
+		
+	</fieldset>
+	<!--[if !IE]>end fieldset<![endif]-->

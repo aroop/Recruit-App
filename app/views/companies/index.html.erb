@@ -4,7 +4,7 @@
 <div class="section table_section">
 	<!--[if !IE]>start title wrapper<![endif]-->
 	<div class="title_wrapper">
-		<h2>Companies</h2>
+		<h2><%= @page_title -%></h2>
 
 		<!--[if !IE]>start section menu<![endif]-->
 		<ul class="section_menu">
@@ -41,44 +41,8 @@
 										<th>Notes</th>
 										<th>Category</th>
 										<th>Actions</th>
-									</tr>
-									
-									<tr class="first">
-										<td style="width: 200px;"><a href="#" class="product_name">Ascent Technologies</a></td>
-										<td style="width: 150px;">302 858 4200</td>
-										<td style="width: 150px;">vijay@ascentinc.net</td>
-										<td>This is a blah blah compnay in so and so business</td>
-										<td style="width: 150px;">Client</td>
-										<td style="width: 120px;">
-											<div class="actions">
-												<ul>
-													<li><a class="action1" href="#">1</a></li>
-													<li><a class="action2" href="#">2</a></li>
-													<li><a class="action3" href="#">3</a></li>
-													<li><a class="action4" href="#">4</a></li>
-													<li><input class="radio" name="" type="checkbox" value="" /></li>
-												</ul>
-											</div>
-										</td>
-									</tr>
-									<tr class="second">
-										<td><a href="#" class="product_name">JComponent Technologies</a></td>
-										<td>916 307 7863</td>
-										<td>swetha@jcomponent.com</td>
-										<td>Another blah blah company</td>
-										<td>Prospect</td>
-										<td>
-											<div class="actions">
-												<ul>
-													<li><a class="action1" href="#">1</a></li>
-													<li><a class="action2" href="#">2</a></li>
-													<li><a class="action3" href="#">3</a></li>
-													<li><a class="action4" href="#">4</a></li>
-													<li><input class="radio" name="" type="checkbox" value="" /></li>
-												</ul>
-											</div>
-										</td>
-									</tr>
+									</tr>									
+									<%= render :partial => 'company', :collection => @companies %>
 								</tbody></table>
 								</div>
 							</div>
@@ -88,7 +52,7 @@
 							<!--[if !IE]>start table menu<![endif]-->
 							<div class="table_menu">
 								<ul class="left">
-									<li><%= link_to "<span><span>ADD NEW</span></span>", new_contact_path, :class => "button add_new" %></li>
+									<li><%= link_to "<span><span>ADD NEW</span></span>", new_company_path, :class => "button add_new" %></li>
 								</ul>
 								<ul class="right">
 									<li><a href="#" class="button check_all"><span><span>CHECK ALL</span></span></a></li>
@@ -97,29 +61,9 @@
 							</div>
 							<!--[if !IE]>end table menu<![endif]-->
 							
-							
 							<!--[if !IE]>start pagination<![endif]-->
-							<div class="pagination">
-								<span class="page_no">Page 1 of 12</span>
-								
-								<ul class="pag_list">
-									<li><a href="#" class="button light_blue_btn"><span><span>PREVIOUS</span></span></a> </li>
-									<li><a href="#">1</a></li>
-									<li><a href="#" class="current_page"><span><span>2</span></span></a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">5</a></li>
-									<li>[...]</li>
-									<li><a href="#">12</a></li>
-									<li><a href="#" class="button light_blue_btn"><span><span>NEXT</span></span></a> </li>
-								</ul>
-								
-								
-							</div>
+							<%= will_paginate(@companies) %>
 							<!--[if !IE]>end pagination<![endif]-->
-							
-							
-							
 							
 						</div>
 					</div>
@@ -135,8 +79,6 @@
 	<!--[if !IE]>end section content<![endif]-->
 </div>
 <!--[if !IE]>end section<![endif]-->
-
-
 
 <% content_for :sidebar do %>
 	<!--[if !IE]>start quick info<![endif]-->

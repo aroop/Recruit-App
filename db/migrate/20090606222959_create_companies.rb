@@ -4,6 +4,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.references :address
+      t.references :account
       t.timestamps
     end
   end
